@@ -27,6 +27,7 @@ export default class Map extends Component {
   }
 
   render() {
+    const quatre = 2*2;
     return (
       <View style={styles.page}>
         <View style={styles.container}>
