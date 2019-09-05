@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
     backgroundColor: "tomato"
   },
   map: {
-    flex: 1
+    flex: 1,
+    padding: 10,
   }
 });
 
