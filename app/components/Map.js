@@ -12,7 +12,7 @@ export default class Map extends Component {
 			<Mapbox.PointAnnotation
 				key="pointAnnotation"
 				id="pointAnnotation"
-				coordinate={[11.254, 43.772]}>
+				coordinate={[-1.6777926, 48.117266]}>
 				<View style={styles.annotationContainer}>
 					<View style={styles.annotationFill} />
 				</View>
@@ -29,7 +29,7 @@ export default class Map extends Component {
 					style={styles.container}>
               <Mapbox.Camera
                 zoomLevel={8}
-                centerCoordinate={[11.256, 43.77]}
+                centerCoordinate={[-1.6777926, 48.117266]}
               />
 
 					{this.renderAnnotations()}
