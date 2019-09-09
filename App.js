@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 
 Mapbox.setAccessToken(
-	'UseYourMapboxTokenHere'
+	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
 );
 export default class App extends Component {
 	renderAnnotations() {
