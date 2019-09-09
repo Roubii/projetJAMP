@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
+import Popup from './app/components/Popup';
 
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
@@ -19,20 +20,21 @@ export default class App extends Component {
 			</Mapbox.PointAnnotation>
 		);
 	}
-
+	
 	render() {
 		return (
 			<View style={styles.container}>
-				<Mapbox.MapView
+				{/* <Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}>
               <Mapbox.Camera
-                zoomLevel={8}
+                zoomLevel={2}
                 centerCoordinate={[11.256, 43.77]}
               />
 
 					{this.renderAnnotations()}
-				</Mapbox.MapView>
+				</Mapbox.MapView> */}
+				<Popup />
 			</View>
 		);
 	}
