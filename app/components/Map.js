@@ -1,39 +1,65 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import MapboxGL from "@react-native-mapbox-gl/maps";
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+import Mapbox from '@react-native-mapbox-gl/maps';
 
-MapboxGL.setAccessToken("pk.eyJ1Ijoic2lwYW9mIiwiYSI6ImNrMDJpcXZpZzA0N3UzY28yZmhsN25wcW4ifQ.QPzvW_koha_7Iru8FSYccA");
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  container: {
-    height: 300,
-    width: 300,
-    backgroundColor: "tomato"
-  },
-  map: {
-    flex: 1,
-    padding: 10,
-  }
-});
+Mapbox.setAccessToken(
+	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
+);
 
 export default class Map extends Component {
-  componentDidMount() {
-    MapboxGL.setTelemetryEnabled(false);
-  }
+	renderAnnotations() {
+		return (
+			<Mapbox.PointAnnotation
+				key="pointAnnotation"
+				id="pointAnnotation"
+				coordinate={[11.254, 43.772]}>
+				<View style={styles.annotationContainer}>
+					<View style={styles.annotationFill} />
+				</View>
+				<Mapbox.Callout title="An annotation here!" />
+			</Mapbox.PointAnnotation>
+		);
+	}
 
-  render() {
-    return (
-      <View style={styles.page}>
-        <View style={styles.container}>
-          <MapboxGL.MapView style={styles.map} />
-        </View>
-      </View>
-    );
-  }
+	render() {
+		return (
+			<View style={styles.container}>
+				<Mapbox.MapView
+					styleURL={Mapbox.StyleURL.Street}
+					style={styles.container}>
+              <Mapbox.Camera
+                zoomLevel={8}
+                centerCoordinate={[11.256, 43.77]}
+              />
+
+					{this.renderAnnotations()}
+				</Mapbox.MapView>
+			</View>
+		);
+	}
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1
+	},
+	map: {
+		height: 400,
+		marginTop: 80
+	},
+	annotationContainer: {
+		width: 30,
+		height: 30,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: 'white',
+		borderRadius: 15
+	},
+	annotationFill: {
+		width: 30,
+		height: 30,
+		borderRadius: 15,
+		backgroundColor: 'blue',
+		transform: [{ scale: 0.6 }]
+	}
+});
