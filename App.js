@@ -10,6 +10,7 @@ import React, {Fragment} from 'react';
 import Map from './app/components/Map';
 import {
   StatusBar,
+  Text
 } from 'react-native';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
     <Fragment>
       <StatusBar barStyle="dark-content" />
       <Map/>
+      <Text>Test</Text>
     </Fragment>
   );
 };

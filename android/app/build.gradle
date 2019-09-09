@@ -191,9 +191,14 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':@react-native-mapbox-gl_maps')
-    
-    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:4.8.0'
-    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:8.2.1'
+
+    // Mapbox SDK
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-services:2.2.9'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:5.5.3@aar'
+
+    // Mapbox plugins
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-localization:0.1.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.3.0'
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
