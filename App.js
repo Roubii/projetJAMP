@@ -32,6 +32,8 @@ export default class App extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
+<Entete/>
+
 				{ <Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}>
@@ -43,7 +45,7 @@ export default class App extends Component {
 					{this.renderAnnotations()}
 				</Mapbox.MapView> }
 				
-		
+	
 			</View>
 		);
 	}
