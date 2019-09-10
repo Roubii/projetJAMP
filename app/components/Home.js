@@ -1,5 +1,5 @@
 import React, {Component} from  'react';
-import { StyleSheet, View, Image, Text} from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity} from 'react-native';
 
 export default class Home extends Component {
   render () {
@@ -8,8 +8,8 @@ export default class Home extends Component {
       <View style={styles.main}>
         <Text style={styles.texte}>Les différents groupes appartenant à SIPA Ouest-France :</Text>
         <View style={styles.blocLogo}>
-          <Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/>
-          <Image source={require('../img/Additi-logo.gif')} style={styles.logo}/>          
+          <TouchableOpacity onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
+          <TouchableOpacity onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>          
         </View>
       </View>
     )
