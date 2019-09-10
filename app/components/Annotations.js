@@ -3,21 +3,54 @@ import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 import PLACES from '../consts/Places';
 
-const Detail = (props) => {
-
+export default class Annotations extends Component {
+  constructor(){
+    super();
+    this.state = {
+      items : PLACES,
+    }
+  }
+  render (){
+    let items = this.state.items
   return (
-
+    <View>
+      {items.map(item => 
     <Mapbox.PointAnnotation
     key="pointAnnotation"
     id="pointAnnotation"
-    coordinate={[-1.6777926, 48.117266]}>
+    coordinate={item.coordonnees}>
     <View style={styles.annotationContainer}>
       <View style={styles.annotationFill} />
     </View>
-    <Mapbox.Callout title="An annotation here!" />
+    <Mapbox.Callout title={item.societe} />
     </Mapbox.PointAnnotation>
-
-  )
+      )}
+  </View>
+  )}
 }
 
-export default Detail;
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1
+	},
+	map: {
+		height: 400,
+		marginTop: 80
+	},
+	annotationContainer: {
+		width: 30,
+		height: 30,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: 'white',
+		borderRadius: 15
+	},
+	annotationFill: {
+		width: 30,
+		height: 30,
+		borderRadius: 15,
+		backgroundColor: 'blue',
+		transform: [{ scale: 0.6 }]
+	}
+});
