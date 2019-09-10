@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
+import Description from './app/components/Description';
 import Popup from './app/components/Popup';
+
 
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
@@ -18,9 +20,12 @@ export default class App extends Component {
 				</View>
 				<Mapbox.Callout title="An annotation here!" />
 			</Mapbox.PointAnnotation>
+
+			
+
 		);
 	}
-	
+
 	render() {
 		return (
 			<View style={styles.container}>
@@ -35,6 +40,7 @@ export default class App extends Component {
 					{this.renderAnnotations()}
 				</Mapbox.MapView> */}
 				<Popup />
+
 			</View>
 		);
 	}

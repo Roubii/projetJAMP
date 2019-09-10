@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import Description from './Description';
+
 
 
 export default class Popup extends Component {
@@ -14,6 +16,7 @@ export default class Popup extends Component {
 		return (
 			<View style={styles.container}>
         <View style={styles.PopupContainer}>
+          <Description/>
         </View>
 			</View>
 		);
