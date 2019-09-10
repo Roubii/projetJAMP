@@ -28,8 +28,8 @@ export default class Map extends Component {
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}>
               <Mapbox.Camera
-                zoomLevel={8}
-                centerCoordinate={[-1.6777926, 48.117266]}
+                zoomLevel={6}
+                centerCoordinate={[-2, 48]}
               />
 
 					{this.renderAnnotations()}
