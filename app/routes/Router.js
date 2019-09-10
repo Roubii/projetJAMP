@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Text, View, TouchableHighlight, StyleSheet, BackHandler} from 'react-native';
+import {View, TouchableHighlight, StyleSheet, BackHandler} from 'react-native';
 import Home from '../components/Home';
 import Popup from '../components/Popup';
 
