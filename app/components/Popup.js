@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import Description from './Description';
+import Filiales from './Filiales';
+import BoutonClose from './BoutonClose';
+
 
 
 
@@ -15,9 +18,16 @@ export default class Popup extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-        <View style={styles.PopupContainer}>
-          <Description/>
-        </View>
+        
+          <View style={styles.PopupContainer}>
+         
+           <Description/>
+           <View style={styles.divider}></View>
+       
+           <Filiales/>
+           <BoutonClose/>
+        
+          </View>
 			</View>
 		);
 	}
@@ -29,18 +39,24 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center',
     backgroundColor: 'grey',
-
   },
-  
 	PopupContainer: {
+    flex: 1,
 		width: 800,
 		height:450,
 		alignItems: 'center',
 		justifyContent: 'center',
     backgroundColor: 'white',
     borderColor: 'grey',
-    borderRadius: 20
-		
-	}
+    borderRadius: 20,
+    flexDirection:'row'	
+  },
+  divider :{
+    width:1,
+    height: '50%',
+    borderRightWidth: 2,
+    borderRightColor: 'rgb(224, 224, 224)',
+    padding:20,
+  }
 	
 });
