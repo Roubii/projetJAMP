@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image} from 'react-native';
+import Recherche from './Recherche.js';
 
 export default class Entete extends Component {
 
@@ -9,8 +10,13 @@ render() {
       <View style={styles.container}>
        <View style={styles.RectangleShapeView} >
          <Image source={require('../img/logoouestfrance.png')} style={styles.Image} />
+         <View style={{ width: 300, marginRight: 125}}>
+          <Recherche style={styles.Recherche} />
+         </View>
+
       </View>
-      </View>
+
+      </View> 
     );
   }
 }
@@ -19,6 +25,7 @@ const styles = StyleSheet.create({
   container: {
     
     backgroundColor: '#F5FCFF',
+    flexDirection:'row',
   },
  
   RectangleShapeView: {
@@ -29,6 +36,8 @@ const styles = StyleSheet.create({
   backgroundColor: '#fff',
   borderBottomColor: 'grey',
   borderBottomWidth: 2,
+  flexDirection: 'row', 
+  justifyContent: 'space-between'
 
 
  },
@@ -38,7 +47,11 @@ const styles = StyleSheet.create({
    height:60,
    resizeMode:"contain",
 
- }
+ },
+recherche: {
+  borderRadius: 4,
+  
+}
 
 });
 
