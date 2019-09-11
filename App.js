@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Entete from './app/components/Entete';
 import Map from './app/components/Map';
-import Router from './app/routes/Router';
+import FicheDetail from './app/components/FicheDetail'
+
 
 export default class App extends Component {
 	render() {
@@ -10,7 +11,7 @@ export default class App extends Component {
 			<View style={styles.container}>
 
 			<Entete/>
-			<Router/>
+			<FicheDetail />
 	
 			</View>
 		);
