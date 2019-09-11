@@ -8,19 +8,6 @@ Mapbox.setAccessToken(
 );
 
 export default class Map extends Component {
-	// renderAnnotations() {
-	// 	return (
-	// 		<Mapbox.PointAnnotation
-	// 			key="pointAnnotation"
-	// 			id="pointAnnotation"
-	// 			coordinate={[-1.6777926, 48.117266]}>
-	// 			<View style={styles.annotationContainer}>
-	// 				<View style={styles.annotationFill} />
-	// 			</View>
-	// 			<Mapbox.Callout title="An annotation here!" />
-	// 		</Mapbox.PointAnnotation>
-	// 	);
-	// }
 
 	render() {
 		return (
@@ -29,11 +16,10 @@ export default class Map extends Component {
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}>
               <Mapbox.Camera
-                zoomLevel={6}
-                centerCoordinate={[-2, 48]}
+                zoomLevel={6.5}
+                centerCoordinate={[-1, 48.08]}
               />
-
-					{/* {this.renderAnnotations()} */}
+							
 					<Annotations/>
 				</Mapbox.MapView>
 			</View>

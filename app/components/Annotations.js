@@ -14,15 +14,15 @@ export default class Annotations extends Component {
     let items = this.state.items
   return (
     <View>
-      {items.map(item => 
+      {items.map((item,k) => 
     <Mapbox.PointAnnotation
-    key="pointAnnotation"
-    id="pointAnnotation"
+    key={k}
+    id={'PointAnnotation'+k}
     coordinate={item.coordonnees}>
     <View style={styles.annotationContainer}>
       <View style={styles.annotationFill} />
     </View>
-    <Mapbox.Callout title={item.societe} />
+    <Mapbox.Callout title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville} />
     </Mapbox.PointAnnotation>
       )}
   </View>
