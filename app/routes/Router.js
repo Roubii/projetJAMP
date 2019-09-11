@@ -23,7 +23,9 @@ export default class Router extends Component {
     });
   }
 
-  reset
+  reset () {
+    this.setState({page:false});
+  }
 
   render () {
 

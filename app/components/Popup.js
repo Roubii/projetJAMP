@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
   },
 	PopupContainer: {
     flex: 1,
-		width: 800,
-		height:450,
+		width: '90%',
+		height:'70%',
 		alignItems: 'center',
 		justifyContent: 'center',
     backgroundColor: 'white',
