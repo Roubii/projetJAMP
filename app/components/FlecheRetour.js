@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet} from 'react-native';
-import { Icon } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/AntDesign';
 
 
 
@@ -16,7 +16,7 @@ export default class FlecheRetour extends Component {
 	render() {
 		return (
      <View >
-       <Icon name='arrow-drop-up' />   
+       <Icon style={styles.icon} name='arrowleft' color='#E2001A' size={35}/> 
      </View>
 		)
 	}
@@ -24,8 +24,9 @@ export default class FlecheRetour extends Component {
 
 
 const styles = StyleSheet.create({
-	
-
+  icon:{
+    marginBottom:40
+  }
 });
 
 

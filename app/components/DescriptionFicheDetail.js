@@ -37,11 +37,12 @@ const styles = StyleSheet.create({
   descriptifContainer: {
     flex:7,
     width: 400,
-    marginLeft:40
+    marginLeft:40,
+    marginTop:40
   },
   titre: {
     fontSize: 20,
-    marginBottom:10
+    marginBottom:20
   },
   paragraphe:{
     textAlign :'justify',

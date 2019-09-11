@@ -30,11 +30,12 @@ const styles = StyleSheet.create({
   },
   titreAdresse:{
   fontSize:20,
-  marginTop:60,
-  marginLeft:30
+  marginTop:100,
+  marginLeft:90
   },
   adresse:{
-    margin:30
+    margin:30,
+    marginLeft:90
 
   }
 
