@@ -35,6 +35,11 @@ export default class Router extends Component {
       <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
       <Popup/>
       </View>
+    }else if (this.state.page === 'additi') {
+      return <View style={styles.main}>
+      <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      <Popup/>
+      </View>
     }else {
       return <View style={styles.main}>
         <Entete map={() => {this.setState({page:'map'})}}/>

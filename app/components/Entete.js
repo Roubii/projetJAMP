@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
  Image: {
    width:150,
    height:60,
-   resizeMode:"contain",
-
+   resizeMode:"cover",
+   marginLeft:30,
  },
 recherche: {
   borderRadius: 4
