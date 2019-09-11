@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList, ActivityIndicator } from 'react-native';
 import { ListItem, SearchBar } from 'react-native-elements';
+import PLACES from '../consts/Places'
+import Recherche from '../components/Recherche';
 
 class SearchableList extends Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class SearchableList extends Component {
       loading: false,
       data: [],
       error: null,
+      items : PLACES,
     };
 
     this.arrayholder = [];
@@ -20,22 +23,19 @@ class SearchableList extends Component {
   }
 
   makeRemoteRequest = () => {
-    const url = `./consts`;
+    
     this.setState({ loading: true });
 
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
+    let items = this.state.items;
+  
+
+    const map = items.map((x, index, items) => {
         this.setState({
-          data: res.results,
-          error: res.error || null,
-          loading: false,
-        });
-        this.arrayholder = res.results;
-      })
-      .catch(error => {
-        this.setState({ error, loading: false });
-      });
+        data: items,
+        loading: false,});
+
+        this.arrayholder = items;
+   });
   };
 
   renderSeparator = () => {
@@ -57,8 +57,9 @@ class SearchableList extends Component {
     });
 
     const newData = this.arrayholder.filter(item => {
-      const itemData = `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
+      const itemData = `${item.societe.toUpperCase()}`;
       const textData = text.toUpperCase();
+      
 
       return itemData.indexOf(textData) > -1;
     });
@@ -67,18 +68,19 @@ class SearchableList extends Component {
     });
   };
 
-  renderHeader = () => {
-    return (
-      <SearchBar
-        placeholder="Type Here..."
-        lightTheme
-        round
-        onChangeText={text => this.searchFilterFunction(text)}
-        autoCorrect={false}
-        value={this.state.value}
-      />
-    );
-  };
+  // renderHeader = () => {
+  //   return (
+  //     // <SearchBar
+  //     //   placeholder="Type Here..."
+  //     //   lightTheme
+  //     //   round
+  //     //   onChangeText={text => this.searchFilterFunction(text)}
+  //     //   autoCorrect={false}
+  //     //   value={this.state.value}
+  //     // />
+  //     <Recherche  onChangeText={text => this.searchFilterFunction(text)} value={this.state.value} />
+  //   );
+  // };
 
   render() {
     if (this.state.loading) {
@@ -94,14 +96,14 @@ class SearchableList extends Component {
           data={this.state.data}
           renderItem={({ item }) => (
             <ListItem
-              leftAvatar={{ source: { uri: item.picture.thumbnail } }}
-              title={`${item.name.first} ${item.name.last}`}
-              subtitle={item.email}
+              // leftAvatar={{ source: { uri: item.picture.thumbnail } }}
+              title={`${item.societe}`}
+              subtitle={`${item.adresse} ${item.codepostal} ${item.ville}`}
             />
           )}
-          keyExtractor={item => item.email}
+          keyExtractor={item => item.index}
           ItemSeparatorComponent={this.renderSeparator}
-          ListHeaderComponent={this.renderHeader}
+          // ListHeaderComponent={this.renderHeader}
         />
       </View>
     );
