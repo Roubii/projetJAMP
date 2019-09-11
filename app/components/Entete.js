@@ -10,12 +10,14 @@ render() {
       <View style={styles.container}>
        <View style={styles.RectangleShapeView} >
          <Image source={require('../img/logoouestfrance.png')} style={styles.Image} />
-         <View style={{ width: 300, marginRight: 125}}>
-          <Recherche style={styles.Recherche} />
+            <View style={{ width: 350, marginRight: 50, flexDirection: "row"}}>
+              <View  style={{ width: 300, }}>
+                <Recherche style={styles.Recherche} />
+                </View>
+            <Image source={require('../img/Iconloca/iconRouge.png')} style={styles.logoRouge}/>
+          </View>
          </View>
-
-      </View>
-
+ 
       </View> 
     );
   }
@@ -43,15 +45,23 @@ const styles = StyleSheet.create({
  },
 
  Image: {
-   width:130,
+   width:150,
    height:60,
    resizeMode:"contain",
 
  },
 recherche: {
-  borderRadius: 4,
-  
+  borderRadius: 4
+},
+
+logoRouge: {
+  width: 60,
+  height:60,
+  flexDirection:'row',
+  resizeMode:"contain",
+  marginRight:50,
 }
+
 
 });
 
