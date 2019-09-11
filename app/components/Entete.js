@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   RectangleShapeView: {
  
  
-  width: 961 ,
+  width: '100%' ,
   height: 65,
   backgroundColor: '#fff',
   borderBottomColor: 'grey',
