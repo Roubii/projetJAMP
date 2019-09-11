@@ -23,10 +23,10 @@ export default class Popup extends Component {
          
            <Description/>
            <View style={styles.divider}></View>
-       
-           <Filiales/>
-           <BoutonClose/>
-        
+            <View style={styles.blocGauche}>
+              <BoutonClose/>
+              <Filiales/>
+            </View>
           </View>
 			</View>
 		);
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 	PopupContainer: {
     flex: 1,
 		width: '90%',
-		height:'70%',
+		height:'80%',
 		alignItems: 'center',
 		justifyContent: 'center',
     backgroundColor: 'white',
@@ -57,6 +57,9 @@ const styles = StyleSheet.create({
     borderRightWidth: 2,
     borderRightColor: 'rgb(224, 224, 224)',
     padding:20,
-  }
-	
+  },
+  blocGauche: {
+    flexDirection:'column',
+    justifyContent:'flex-end'
+  },
 });

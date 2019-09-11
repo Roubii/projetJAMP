@@ -13,11 +13,9 @@ export default class BoutonClose extends Component {
 	
 	render() {
 		return (
-     <View >
        <TouchableOpacity>
          <Image source={require('../img/BOUTONS/close.png')} style={styles.image} />
-       </TouchableOpacity>   
-     </View>
+       </TouchableOpacity>
 		)
 	}
 }
@@ -29,9 +27,6 @@ const styles = StyleSheet.create({
     width:30,
     height:30,
     resizeMode:'contain',
-    position:'absolute',
-    top:-220,
-    right:20,
   }
 });
 

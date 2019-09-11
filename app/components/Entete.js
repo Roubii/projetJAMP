@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image} from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import Recherche from './Recherche.js';
 
 export default class Entete extends Component {
@@ -9,15 +9,14 @@ render() {
     return (
       <View style={styles.container}>
        <View style={styles.RectangleShapeView} >
-         <Image source={require('../img/logoouestfrance.png')} style={styles.Image} />
+         <TouchableOpacity onPress={this.props.home}><Image source={require('../img/logoouestfrance.png')} style={styles.Image} /></TouchableOpacity>
             <View style={{ width: 350, marginRight: 50, flexDirection: "row"}}>
               <View  style={{ width: 300, }}>
                 <Recherche style={styles.Recherche} />
-                </View>
-            <Image source={require('../img/Iconloca/iconRouge.png')} style={styles.logoRouge}/>
+              </View>
+              <TouchableOpacity onPress={this.props.map}><Image source={require('../img/Iconloca/iconRouge.png')} style={styles.logoRouge}/></TouchableOpacity>
           </View>
-         </View>
- 
+         </View> 
       </View> 
     );
   }

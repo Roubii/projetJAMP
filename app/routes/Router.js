@@ -23,9 +23,6 @@ export default class Router extends Component {
     });
   }
 
-  reset () {
-    this.setState({page:false});
-  }
 
   render () {
 
@@ -34,12 +31,12 @@ export default class Router extends Component {
         {
           (this.state.page) ?
           <View style={styles.main}>
-              <Entete/>
+              <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
               <Popup/>
           </View>
           :
           <View style={styles.main}>
-            <Entete/>
+            <Entete map={() => {this.setState({page:'map'})}}/>
             <Home OuestFrance={() => {this.setState({page:'ouestfrance'}) }} Additi={() => {this.setState({page:'additi'}) }}/>
           </View>
         }
