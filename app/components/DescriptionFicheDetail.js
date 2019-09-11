@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
+import FlecheRetour from './FlecheRetour';
 
 
 
@@ -21,11 +22,11 @@ export default class DescriptionFicheDetail extends Component {
               <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
               <Text style={styles.paragraphe}>Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. 
               Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.
-cquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.
-Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant pra 
+              cquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.
+              Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant pra 
               </Text>
               </ScrollView>
-              
+              <FlecheRetour/>
         </View>
 		);
 	}
