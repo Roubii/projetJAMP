@@ -22,7 +22,7 @@ export default class Annotations extends Component {
     <View style={styles.annotationContainer}>
       <View style={styles.annotationFill} />
     </View>
-    <Mapbox.Callout title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville} />
+    <Mapbox.Callout title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville}/>
     </Mapbox.PointAnnotation>
       )}
   </View>
@@ -52,5 +52,5 @@ const styles = StyleSheet.create({
 		borderRadius: 15,
 		backgroundColor: 'blue',
 		transform: [{ scale: 0.6 }]
-	}
+  },
 });
