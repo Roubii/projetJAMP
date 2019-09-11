@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
-import {View, TouchableHighlight, StyleSheet, BackHandler} from 'react-native';
+import {View, Text, StyleSheet, BackHandler, TouchableOpacity} from 'react-native';
 import Home from '../components/Home';
 import Popup from '../components/Popup';
+import Entete from '../components/Entete';
 
 export default class Router extends Component {
   constructor () {
@@ -22,15 +23,23 @@ export default class Router extends Component {
     });
   }
 
+  reset
+
   render () {
 
     return (
       <View style={styles.main}>
         {
           (this.state.page) ?
+          <View style={styles.main}>
+              <Entete/>
               <Popup/>
+          </View>
           :
+          <View style={styles.main}>
+            <Entete/>
             <Home OuestFrance={() => {this.setState({page:'ouestfrance'}) }} Additi={() => {this.setState({page:'additi'}) }}/>
+          </View>
         }
 
       </View>
