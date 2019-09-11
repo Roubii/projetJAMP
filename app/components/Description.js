@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   titre: {
     fontSize: 20,
-    marginBottom:10
+    marginBottom:20
   },
   paragraphe:{
     textAlign :'justify',
