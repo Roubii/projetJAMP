@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
-import BoutonLocalisation from './BoutonLocalisation';
 
 
 
 
-export default class Description extends Component {
+
+export default class DescriptionFicheDetail extends Component {
   constructor () {
     super();
     this.state ={
@@ -25,7 +25,7 @@ cquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec cre
 Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant pra 
               </Text>
               </ScrollView>
-              <BoutonLocalisation/>
+              
         </View>
 		);
 	}

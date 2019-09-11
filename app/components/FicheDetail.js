@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import Description from './Description';
 import Filiales from './Filiales';
-import BoutonClose from './BoutonClose';
+import DescriptionFicheDetail from './DescriptionFicheDetail';
+import FicheDetailAdresse from './FicheDetailAdresse';
 
 
 
 
-export default class Popup extends Component {
+export default class FicheDetail extends Component {
   constructor () {
     super();
     this.state ={
@@ -21,11 +21,10 @@ export default class Popup extends Component {
         
           <View style={styles.PopupContainer}>
          
-           <Description/>
+           <DescriptionFicheDetail/>
            <View style={styles.divider}></View>
        
-           <Filiales/>
-           <BoutonClose/>
+           <FicheDetailAdresse/>
         
           </View>
 			</View>
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: 'grey',
+    backgroundColor: 'white',
   },
 	PopupContainer: {
     flex: 1,
