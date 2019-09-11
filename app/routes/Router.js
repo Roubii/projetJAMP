@@ -4,6 +4,7 @@ import {View, Text, StyleSheet, BackHandler, TouchableOpacity} from 'react-nativ
 import Home from '../components/Home';
 import Popup from '../components/Popup';
 import Entete from '../components/Entete';
+import Map from '../components/Map';
 
 export default class Router extends Component {
   constructor () {
@@ -23,24 +24,31 @@ export default class Router extends Component {
     });
   }
 
+  renderPage(){
+    if(this.state.page === 'map') {
+      return <View style={styles.main}>
+        <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+        <Map/>
+      </View>
+    } else if (this.state.page === 'ouestfrance') {
+      return <View style={styles.main}>
+      <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      <Popup/>
+      </View>
+    }else {
+      return <View style={styles.main}>
+        <Entete map={() => {this.setState({page:'map'})}}/>
+        <Home OuestFrance={() => {this.setState({page:'ouestfrance'}) }} Additi={() => {this.setState({page:'additi'}) }}/>
+      </View>
+    }
+  }
+
 
   render () {
 
     return (
       <View style={styles.main}>
-        {
-          (this.state.page) ?
-          <View style={styles.main}>
-              <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-              <Popup/>
-          </View>
-          :
-          <View style={styles.main}>
-            <Entete map={() => {this.setState({page:'map'})}}/>
-            <Home OuestFrance={() => {this.setState({page:'ouestfrance'}) }} Additi={() => {this.setState({page:'additi'}) }}/>
-          </View>
-        }
-
+        {this.renderPage()}
       </View>
     )
   }
