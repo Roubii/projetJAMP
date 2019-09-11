@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
+import Annotations from './Annotations';
 
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
 );
 
 export default class Map extends Component {
-	renderAnnotations() {
-		return (
-			<Mapbox.PointAnnotation
-				key="pointAnnotation"
-				id="pointAnnotation"
-				coordinate={[-1.6777926, 48.117266]}>
-				<View style={styles.annotationContainer}>
-					<View style={styles.annotationFill} />
-				</View>
-				<Mapbox.Callout title="An annotation here!" />
-			</Mapbox.PointAnnotation>
-		);
-	}
 
 	render() {
 		return (
@@ -28,11 +16,11 @@ export default class Map extends Component {
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}>
               <Mapbox.Camera
-                zoomLevel={8}
-                centerCoordinate={[-1.6777926, 48.117266]}
+                zoomLevel={6.5}
+                centerCoordinate={[-1, 48.08]}
               />
-
-					{this.renderAnnotations()}
+							
+					<Annotations/>
 				</Mapbox.MapView>
 			</View>
 		);
