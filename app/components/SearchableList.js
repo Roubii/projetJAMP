@@ -50,14 +50,17 @@ class SearchableList extends Component {
   renderHeader = () => {
     return (
       <SearchBar
-       placeholder="Type Here..."
+      placeholder="Rechercher"
+      backgroundColor='#fff'
+      inputContainerStyle={{backgroundColor: '#fff', borderRadius: 15, borderColor:'red', borderWidth: 2, borderBottomColor:'red', borderBottomWidth: 2}}
+      containerStyle={{backgroundColor: 'transparent'}}
+      inputStyle={{borderWidth: 0, borderColor: 'transparent', flex:1}}
        lightTheme
        round
        onChangeText={text => this.searchFilterFunction(text)}
        autoCorrect={false}
        value={this.state.value}
       />
-      // <Recherche  onChangeText={text => this.searchFilterFunction(text)} value={this.state.value} />
     );
   };
 
@@ -81,7 +84,7 @@ class SearchableList extends Component {
           )}
           keyExtractor={(item, index) => String(index)}
           ItemSeparatorComponent={this.renderSeparator}
-           ListHeaderComponent={this.renderHeader}
+          ListHeaderComponent={this.renderHeader}
         />
       </View>
     );

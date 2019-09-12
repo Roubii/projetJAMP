@@ -1,46 +1,33 @@
 import React from 'react';
-import { SearchBar } from 'react-native-elements';
+import { Text, StyleSheet, View } from 'react-native';
 
 
 
 
 export default class Recherche extends React.Component {
-  state = {
-    search: '',
-  };
-
-  // updateSearch = search => {
-  //   this.setState({ search });
-  // };
-
-  // searchFilterFunction = text => {
-  //   this.setState({
-  //     value: text,
-  //   });
-
 
   render() {
-    const { search } = this.state;
-    let {style} = this.props;
-
-
     return (
-      <SearchBar
-      searchIcon={{name:'search'}}
-        inputStyle={style}
-        lightTheme
-        placeholder="Rechercher"
-        // onChangeText={this.updateSearch}
-        // onChangeText={text => this.searchFilterFunction(text)}
-        // value={this.state.value}
-        autoCorrect={false}
-        // value={search}
-        backgroundColor='#fff'
-        inputContainerStyle={{backgroundColor: '#fff', borderRadius: 15, borderColor:'red', borderWidth: 2, borderBottomColor:'red', borderBottomWidth: 2}}
-        containerStyle={{backgroundColor: 'transparent'}}
-        inputStyle={{borderWidth: 0, borderColor: 'transparent', flex:1}}
-    
-      />
+      <View style={styles.bouton}>
+        <Text style={styles.texteBouton}>Rechercher</Text>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  bouton: {
+    width:200,
+    height:50,
+    backgroundColor:'#E2001A',
+    borderRadius:10,
+    justifyContent:'center',
+    margin:7,
+  },
+  texteBouton:{
+    color:'white',
+    fontSize:20,
+    fontWeight:'bold',
+    textAlign:'center',
+  }
+})

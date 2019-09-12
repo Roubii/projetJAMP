@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity, Text} from 'react-native';
 import Recherche from './Recherche.js';
+import SearchableList from './SearchableList.js';
 
 export default class Entete extends Component {
 
@@ -12,35 +13,31 @@ render() {
          <TouchableOpacity onPress={this.props.home}><Image source={require('../img/logoouestfrance.png')} style={styles.Image} /></TouchableOpacity>
             <View style={{ width: 350, marginRight: 50, flexDirection: "row"}}>
               <View  style={{ width: 300, }}>
-                <Recherche style={styles.Recherche} />
+                <TouchableOpacity onPress={this.props.search}><Recherche/></TouchableOpacity>
               </View>
-              <TouchableOpacity onPress={this.props.map}><Image source={require('../img/Iconloca/iconRouge.png')} style={styles.logoRouge}/></TouchableOpacity>
+              <TouchableOpacity onPress={this.props.map}><Image source={require('../img/BOUTONS/placeholder.png')} style={styles.logoRouge}/></TouchableOpacity>
           </View>
          </View> 
-      </View> 
+      </View>
+
     );
   }
 }
 const styles = StyleSheet.create({
  
-  container: {
-    
+  container: {    
     backgroundColor: '#F5FCFF',
     flexDirection:'row',
   },
  
-  RectangleShapeView: {
- 
- 
+  RectangleShapeView: {  
   width: '100%' ,
   height: 65,
   backgroundColor: '#fff',
   borderBottomColor: 'grey',
   borderBottomWidth: 2,
   flexDirection: 'row', 
-  justifyContent: 'space-between'
-
-
+  justifyContent: 'space-between',
  },
 
  Image: {
@@ -49,19 +46,14 @@ const styles = StyleSheet.create({
    resizeMode:"cover",
    marginLeft:30,
  },
-recherche: {
-  borderRadius: 4
-},
 
 logoRouge: {
-  width: 60,
+  width: 50,
   height:60,
   flexDirection:'row',
   resizeMode:"contain",
-  marginRight:50,
+  marginRight:30,
 }
-
-
 });
 
  

@@ -5,6 +5,7 @@ import Home from '../components/Home';
 import Popup from '../components/Popup';
 import Entete from '../components/Entete';
 import Map from '../components/Map';
+import SearchableList from '../components/SearchableList';
 
 export default class Router extends Component {
   constructor () {
@@ -26,23 +27,28 @@ export default class Router extends Component {
 
   renderPage(){
     if(this.state.page === 'map') {
-      return <View style={styles.main}>
-        <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      return <View style={{flex:1}}>
+        <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
         <Map/>
       </View>
     } else if (this.state.page === 'ouestfrance') {
-      return <View style={styles.main}>
-      <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      return <View style={{flex:1}}>
+      <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
       <Popup/>
       </View>
     }else if (this.state.page === 'additi') {
-      return <View style={styles.main}>
-      <Entete home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      return <View style={{flex:1}}>
+      <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
       <Popup/>
       </View>
+    }else if (this.state.page === 'search') {
+      return <View style={{flex:1}}>
+      <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      <SearchableList/>
+      </View>
     }else {
-      return <View style={styles.main}>
-        <Entete map={() => {this.setState({page:'map'})}}/>
+      return <View style={{flex:1}}>
+        <Entete search={() => {this.setState({page:'search'}) }} map={() => {this.setState({page:'map'})}}/>
         <Home OuestFrance={() => {this.setState({page:'ouestfrance'}) }} Additi={() => {this.setState({page:'additi'}) }}/>
       </View>
     }
