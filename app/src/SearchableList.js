@@ -10,33 +10,12 @@ class SearchableList extends Component {
 
     this.state = {
       loading: false,
-      data: [],
+      data: PLACES,
       error: null,
-      items : PLACES,
     };
 
     this.arrayholder = [];
   }
-
-  componentDidMount() {
-    this.makeRemoteRequest();
-  }
-
-  makeRemoteRequest = () => {
-    
-    this.setState({ loading: true });
-
-    let items = this.state.items;
-  
-
-    const map = items.map((x, index, items) => {
-        this.setState({
-        data: items,
-        loading: false,});
-
-        this.arrayholder = items;
-   });
-  };
 
   renderSeparator = () => {
     return (
@@ -57,7 +36,7 @@ class SearchableList extends Component {
     });
 
     const newData = this.arrayholder.filter(item => {
-      const itemData = `${item.societe.toUpperCase()}`;
+      const itemData = `${item.societe.toUpperCase()} ${item.ville.toUpperCase()}`;
       const textData = text.toUpperCase();
       
 
@@ -68,19 +47,19 @@ class SearchableList extends Component {
     });
   };
 
-  // renderHeader = () => {
-  //   return (
-  //     // <SearchBar
-  //     //   placeholder="Type Here..."
-  //     //   lightTheme
-  //     //   round
-  //     //   onChangeText={text => this.searchFilterFunction(text)}
-  //     //   autoCorrect={false}
-  //     //   value={this.state.value}
-  //     // />
-  //     <Recherche  onChangeText={text => this.searchFilterFunction(text)} value={this.state.value} />
-  //   );
-  // };
+  renderHeader = () => {
+    return (
+      <SearchBar
+       placeholder="Type Here..."
+       lightTheme
+       round
+       onChangeText={text => this.searchFilterFunction(text)}
+       autoCorrect={false}
+       value={this.state.value}
+      />
+      // <Recherche  onChangeText={text => this.searchFilterFunction(text)} value={this.state.value} />
+    );
+  };
 
   render() {
     if (this.state.loading) {
@@ -96,14 +75,13 @@ class SearchableList extends Component {
           data={this.state.data}
           renderItem={({ item }) => (
             <ListItem
-              // leftAvatar={{ source: { uri: item.picture.thumbnail } }}
               title={`${item.societe}`}
               subtitle={`${item.adresse} ${item.codepostal} ${item.ville}`}
             />
           )}
-          keyExtractor={item => item.index}
+          keyExtractor={(item, index) => String(index)}
           ItemSeparatorComponent={this.renderSeparator}
-          // ListHeaderComponent={this.renderHeader}
+           ListHeaderComponent={this.renderHeader}
         />
       </View>
     );
