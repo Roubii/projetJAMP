@@ -19,10 +19,9 @@ export default class Annotations extends Component {
     key={k}
     id={'PointAnnotation'+k}
     coordinate={item.coordonnees}>
-    <View style={styles.annotationContainer}>
-      <View style={styles.annotationFill} />
-    </View>
-    <Mapbox.Callout title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville}/>
+    <Mapbox.Callout 
+    title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville} 
+    textStyle={styles.infoText}/>
     </Mapbox.PointAnnotation>
       )}
   </View>
@@ -53,4 +52,8 @@ const styles = StyleSheet.create({
 		backgroundColor: 'blue',
 		transform: [{ scale: 0.6 }]
   },
+  infoText:{
+    textAlign:'left',
+
+  }
 });

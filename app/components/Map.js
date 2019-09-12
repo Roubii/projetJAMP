@@ -14,15 +14,16 @@ export default class Map extends Component {
 			<View style={styles.container}>
 				<Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
-					style={styles.container}>
+					style={styles.container}
+					rotateEnabled={false}>
               <Mapbox.Camera
                 zoomLevel={6.5}
-                centerCoordinate={[-1, 48.08]}
+								centerCoordinate={[-1, 48.08]}
               />
 							
 					<Annotations/>
 				</Mapbox.MapView>
-			</View>
+			</View> 
 		);
 	}
 }
