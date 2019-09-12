@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, SafeAreaView } from 'react-native';
-import Entete from './app/components/Entete';
 import Router from './app/routes/Router';
 
 export default class App extends Component {

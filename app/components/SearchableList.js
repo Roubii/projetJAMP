@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, FlatList, ActivityIndicator } from 'react-native';
 import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
-import Recherche from '../components/Recherche';
+import Recherche from './Recherche';
 
 class SearchableList extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class SearchableList extends Component {
       error: null,
     };
 
-    this.arrayholder = [];
+    this.arrayholder = PLACES;
   }
 
   renderSeparator = () => {
