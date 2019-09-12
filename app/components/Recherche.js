@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   bouton: {
     width:200,
     height:50,
-    backgroundColor:'#E2001A',
+    backgroundColor:'#083E98',
     borderRadius:10,
     justifyContent:'center',
     margin:7,

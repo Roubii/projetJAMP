@@ -8,8 +8,8 @@ export default class Home extends Component {
       <View style={styles.main}>
         <Text style={styles.texte}>Les différents groupes appartenant à SIPA Ouest-France :</Text>
         <View style={styles.blocLogo}>
-          <TouchableOpacity onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
-          <TouchableOpacity onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>          
+          <TouchableOpacity style={{height:150}} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
+          <TouchableOpacity style={{height:150}} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>          
         </View>
       </View>
     )
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   logo:{
     width:400,
-    resizeMode:'contain',
+    resizeMode:'cover',
   },
   texte: {
     fontSize:22,

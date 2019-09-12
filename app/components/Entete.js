@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   width: '100%' ,
   height: 65,
   backgroundColor: '#fff',
-  borderBottomColor: 'grey',
+  borderBottomColor: '#B6BAB6',
   borderBottomWidth: 2,
   flexDirection: 'row', 
   justifyContent: 'space-between',
