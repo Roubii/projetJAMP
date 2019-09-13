@@ -1,5 +1,5 @@
 import React, {Component} from  'react';
-import { StyleSheet, View, Image, Text, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity, ScrollView} from 'react-native';
 
 export default class Home extends Component {
   render () {
@@ -7,10 +7,16 @@ export default class Home extends Component {
       
       <View style={styles.main}>
         <Text style={styles.texte}>Les différents groupes appartenant à SIPA Ouest-France :</Text>
-        <View style={styles.blocLogo}>
-          <TouchableOpacity style={{height:150}} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
-          <TouchableOpacity style={{height:150}} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>          
-        </View>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator>
+          <View style={styles.blocLogo}>
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>          
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>      
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>      
+          </View>
+        </ScrollView>
       </View>
     )
   }
@@ -26,15 +32,21 @@ const styles = StyleSheet.create({
     width:'100%',
     justifyContent:'space-around',
     flexDirection:'row',
-    padding:20,
+    alignItems:'center',
+   
   },
   logo:{
     width:400,
     resizeMode:'cover',
   },
   texte: {
-    fontSize:22,
+    fontSize:30,
     textAlign:'center',
-    padding:20,
+    padding:30,
   },
+  containertouchable:{
+    height:150,
+    marginBottom:'5%',
+   
+  }
 })
