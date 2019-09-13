@@ -24,7 +24,7 @@ export default class PopupCarte extends Component {
       </View>
       :
       <View>
-      <FicheDetail style={styles.fiche}/>
+      <FicheDetail/>
       </View>
     )
   }
@@ -50,9 +50,5 @@ const styles = StyleSheet.create({
   info : {
     color:'blue',
     textAlign:'right'
-  },
-  fiche: {
-    position:'absolute',
-    top:10
   }
 });
