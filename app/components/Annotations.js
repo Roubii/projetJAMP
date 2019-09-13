@@ -20,10 +20,8 @@ export default class Annotations extends Component {
     key={k}
     id={'PointAnnotation'+k}
     coordinate={item.coordonnees}>
-    <Mapbox.Callout >
-     {/* title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville} 
-     textStyle={styles.infoText} */}
-      <PopupCarte info={this.props.popup} societe={item.societe} type={item.type} adresse={item.adresse} codepostal={item.codepostal} ville={item.ville.toUpperCase()}/>
+    <Mapbox.Callout>
+      <PopupCarte donnees={item} info={this.props.popup}/>
     </Mapbox.Callout>
     </Mapbox.PointAnnotation>
       )}

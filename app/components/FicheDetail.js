@@ -21,7 +21,7 @@ export default class FicheDetail extends Component {
         
           <View style={styles.PopupContainer}>
          
-           <DescriptionFicheDetail/>
+           <DescriptionFicheDetail retour={this.props.close}/>
            <View style={styles.divider}></View>
        
            <FicheDetailAdresse/>
