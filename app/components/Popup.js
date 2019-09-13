@@ -18,16 +18,16 @@ export default class Popup extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-        
-          <View style={styles.PopupContainer}>
-         
+        <View style={styles.PopupContainer}>
+        <BoutonClose/>
+          <View style={styles.PopupSousContainer}>
            <Description/>
            <View style={styles.divider}></View>
             <View style={styles.blocGauche}>
-              <BoutonClose/>
               <Filiales/>
             </View>
           </View>
+        </View>
 			</View>
 		);
 	}
@@ -49,7 +49,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderColor: 'grey',
     borderRadius: 20,
-    flexDirection:'row'	
+    flexDirection:'column',
+ 
+  },
+  PopupSousContainer: {
+    flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+    flexDirection:'row',
   },
   divider :{
     width:1,
