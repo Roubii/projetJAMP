@@ -28,11 +28,13 @@ export default class Filiales extends Component {
 
 const styles = StyleSheet.create({
 	contentContainer:{
-  height:'80%'
+  height:'80%',
+ 
   },
   image:{
     width:250,
     resizeMode:'contain',
-    marginLeft:20
+    marginLeft:20,
+    marginRight:100
   }
 });

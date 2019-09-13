@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     width:30,
     height:30,
     resizeMode:'contain',
-    marginLeft:1080,
-    marginTop:10
+    marginLeft:1060,
+    marginTop:20
   }
 });
 

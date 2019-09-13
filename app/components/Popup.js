@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
     flexDirection:'row',
+    marginLeft: 40
   },
   divider :{
     width:1,
