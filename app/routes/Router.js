@@ -45,7 +45,7 @@ export default class Router extends Component {
     }else if (this.state.page === 'search') {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-      <SearchableList/>
+      <SearchableList resultat={() => {this.setState({page:'info'}) }}/>
       </View>
     }else  if (this.state.page === 'info') {
       return <View style={{flex:1}}>
