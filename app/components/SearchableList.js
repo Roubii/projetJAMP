@@ -21,14 +21,19 @@ class SearchableList extends Component {
 
   renderSeparator = () => {
     return (
-      <View style={{height: 1, width: '86%', backgroundColor: '#CED0CE', marginLeft: '14%'}}/>
+      <View style={{height: 1, width: '100%', backgroundColor: '#CED0CE'}}/>
     );
   };
 
   neutralText (txt) {
     txt = txt.toLowerCase();
-    txt = txt.replace(/(é|è|e|ë)/g,"e");
-    txt = txt.replace(/(à)/g,"a");
+    txt = txt.replace(/(é|è|e|ë|ê)/g,"e");
+    txt = txt.replace(/(à|á|â|ã|ä|å)/g,"a");
+    txt = txt.replace(/(æ)/g,"ae");
+    txt = txt.replace(/(ç)/g,"c");
+    txt = txt.replace(/(ì|í|î|ï)/g,"i");               
+    txt = txt.replace(/(ò|ó|ô|õ|ö)/g,"o");
+    txt = txt.replace(/(ù|ú|û|ü)/g,"u");
       return txt;
   }
 
@@ -47,7 +52,6 @@ class SearchableList extends Component {
       textData = textData.split(' ');
       let hasWord = true;
       for (let i =0; i < textData.length; i++) {
-        // console.warn(toInspect, toInspect.match(textData[i]), textData[i]);
 
         if (toInspect.match(textData[i]) == null) {
           hasWord = false;
@@ -93,6 +97,7 @@ class SearchableList extends Component {
             <ListItem
               title={`${item.type} ${item.societe} `}
               subtitle={`${item.adresse} ${item.codepostal} ${item.ville}`}
+              onPress={this.props.resultat}
             />
           )}
           keyExtractor={(item, index) => String(index)}
