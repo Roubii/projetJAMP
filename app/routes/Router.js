@@ -34,7 +34,9 @@ export default class Router extends Component {
 
 
   renderPage () {
+
     let {page} = this.state;
+
     if(this.state.page === 'map') {
       return <View style={{flex:1}}>
         <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false, previous: page}) }} map={() => {this.setState({page:'map', previous: page})}}/>
@@ -43,22 +45,22 @@ export default class Router extends Component {
     } else if (this.state.page === 'ouestfrance') {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-      <Popup/>
+      <Popup close={() => {this.setState({page: this.state.previous})}}/>
       </View>
     }else if (this.state.page === 'additi') {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-      <Popup/>
+      <Popup close={() => {this.setState({page: this.state.previous})}}/>
       </View>
     }else if (this.state.page === 'search') {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-      <SearchableList/>
+      <SearchableList resultat={() => {this.setState({page:'info', previous: page}) }}/>
       </View>
     }else  if (this.state.page === 'info') {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-      <FicheDetail/>
+      <FicheDetail close={() => {this.setState({page: this.state.previous})}}/>
       </View>
     }else {
       return <View style={{flex:1}}>
