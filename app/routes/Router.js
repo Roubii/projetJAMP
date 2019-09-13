@@ -6,6 +6,7 @@ import Popup from '../components/Popup';
 import Entete from '../components/Entete';
 import Map from '../components/Map';
 import SearchableList from '../components/SearchableList';
+import FicheDetail from '../components/FicheDetail';
 
 export default class Router extends Component {
   constructor () {
@@ -29,7 +30,7 @@ export default class Router extends Component {
     if(this.state.page === 'map') {
       return <View style={{flex:1}}>
         <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-        <Map/>
+        <Map annotations={() => {this.setState({page:'info'}) }}/>
       </View>
     } else if (this.state.page === 'ouestfrance') {
       return <View style={{flex:1}}>
@@ -45,6 +46,11 @@ export default class Router extends Component {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
       <SearchableList/>
+      </View>
+    }else  if (this.state.page === 'info') {
+      return <View style={{flex:1}}>
+      <Entete search={() => {this.setState({page:'search'}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+      <FicheDetail/>
       </View>
     }else {
       return <View style={{flex:1}}>

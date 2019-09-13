@@ -15,13 +15,14 @@ export default class Map extends Component {
 				<Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}
-					rotateEnabled={false}>
+					rotateEnabled={false}
+					maxZoomLevel={4}>
               <Mapbox.Camera
                 zoomLevel={6.5}
 								centerCoordinate={[-1, 48.08]}
               />
 							
-					<Annotations/>
+					<Annotations popup={this.props.annotations}/>
 				</Mapbox.MapView>
 			</View> 
 		);

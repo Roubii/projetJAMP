@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 import PLACES from '../consts/Places';
+import PopupCarte from './PopupCarte';
 
 export default class Annotations extends Component {
   constructor(){
@@ -22,7 +23,7 @@ export default class Annotations extends Component {
     <Mapbox.Callout >
      {/* title={item.societe+'\n'+item.type+'\n'+item.adresse+'\n'+item.codepostal+' '+item.ville} 
      textStyle={styles.infoText} */}
-      <Text>Test</Text>
+      <PopupCarte info={this.props.popup} societe={item.societe} type={item.type} adresse={item.adresse} codepostal={item.codepostal} ville={item.ville.toUpperCase()}/>
     </Mapbox.Callout>
     </Mapbox.PointAnnotation>
       )}
