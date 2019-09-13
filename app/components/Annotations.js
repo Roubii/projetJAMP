@@ -23,8 +23,7 @@ export default class Annotations extends Component {
     <Mapbox.Callout>
       <PopupCarte donnees={item} info={this.props.popup}/>
     </Mapbox.Callout>
-    </Mapbox.PointAnnotation>
-      )}
+    </Mapbox.PointAnnotation>)}
   </View>
   )}
 }
