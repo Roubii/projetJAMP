@@ -7,24 +7,35 @@ import Entete from '../components/Entete';
 import Map from '../components/Map';
 import SearchableList from '../components/SearchableList';
 import FicheDetail from '../components/FicheDetail';
-
+let prevState;
 export default class Router extends Component {
   constructor () {
     super();
     this.state = {
       page: false,
+      
     }
   }
+ 
+  componentDidUpdate(nextProps, nextState) {
+    // console.warn(nextState); //will show the new state
+    // console.warn(this.state.page); //will show the previous state
+    prevState = nextState;
+    console.warn(prevState);
+  } 
 
   componentDidMount () {
     let t = this;
     BackHandler.addEventListener('hardwareBackPress', () => {
       if(t.state.page){
-        t.setState({page:false});
+        this.componentDidUpdate();
+        console.warn(prevState);
+        // this.setState(prevState)
         return true;
       }
     });
   }
+
 
   renderPage(){
     if(this.state.page === 'map') {
