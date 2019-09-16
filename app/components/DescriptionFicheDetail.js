@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     width:200,
     height:80,
     resizeMode:'cover',
-    marginTop:-20
+    marginTop:-30
 
   }
 });

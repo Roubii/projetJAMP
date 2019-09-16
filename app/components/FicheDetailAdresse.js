@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 	contentContainer:{
   height:'100%',
   width:'40%',
-  alignItems:'center'
+  alignItems:'center',
   },
   titreAdresse:{
   fontSize:20,
