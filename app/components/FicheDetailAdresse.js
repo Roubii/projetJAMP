@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import BoutonLocalisationSmall from './BoutonLocalisationSmall';
-import FlecheRetour from './FlecheRetour';
-
-
 
 
 export default class FicheDetailAdresse extends Component {

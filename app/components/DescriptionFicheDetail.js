@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
-import FlecheRetour from './FlecheRetour';
 
 
 
