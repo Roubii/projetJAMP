@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import FicheDetail from './FicheDetail';
 
 
 export default class PopupCarte extends Component {
+  constructor(){
+    super();
+    this.state = {
+      page : 'carte',
+    }
+  }
+
   render () {
     let item = this.props.donnees;
     return(
@@ -13,7 +21,6 @@ export default class PopupCarte extends Component {
         <Text>{item.codepostal} {item.ville.toUpperCase()}</Text>
         <TouchableOpacity onPress={() => this.props.sendAdresse(item)}><Text style={styles.info}>Plus d'infos...</Text></TouchableOpacity>
       </View>
-      
     )
   }
 }
