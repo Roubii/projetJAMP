@@ -43,8 +43,15 @@ class SearchableList extends Component {
     });
 
     const newData = this.arrayholder.filter(item => {
+      let item2 = {
+        adresse: item.adresse,
+        type: item.type,
+        societe: item.societe,
+        codepostal: item.codepostal,
+        ville: item.ville,
+      }
 
-      let toInspect = JSON.stringify(item); 
+      let toInspect = JSON.stringify(item2); 
       toInspect = this.neutralText(toInspect);
 
       let textData = this.neutralText(text); 
@@ -52,9 +59,10 @@ class SearchableList extends Component {
       textData = textData.split(' ');
       let hasWord = true;
       for (let i =0; i < textData.length; i++) {
-
-        if (toInspect.match(textData[i]) == null) {
-          hasWord = false;
+        if(textData[i] != '') {
+          if (toInspect.match(textData[i]) == null) {
+            hasWord = false;
+          }
         }
       }
       return hasWord;
