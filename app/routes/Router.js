@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+import {View, StyleSheet, BackHandler} from 'react-native';
 
-import {View, Text, StyleSheet, BackHandler, TouchableOpacity} from 'react-native';
 import Home from '../components/Home';
 import Popup from '../components/Popup';
 import Entete from '../components/Entete';
@@ -33,38 +33,55 @@ export default class Router extends Component {
   }
 
 
+  renderEntete () {
+    
+    let {page} = this.state;
+    return (
+      <Entete 
+        search={() => {this.setState({page:'search', previous: page}) }} 
+        home={() => {this.setState({page:false, previous: page}) }} 
+        map={() => {this.setState({page:'map', previous: page})}}
+      />
+    )
+  }
+
   renderPage () {
 
     let {page} = this.state;
 
     if(this.state.page === 'map') {
       return <View style={{flex:1}}>
-        <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false, previous: page}) }} map={() => {this.setState({page:'map', previous: page})}}/>
+        {this.renderEntete()}
         <Map annotations={() => {this.setState({page:'info', previous: page}) }}/>
       </View>
+
     } else if (this.state.page === 'ouestfrance') {
       return <View style={{flex:1}}>
-      <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+        {this.renderEntete()}
       <Popup close={() => {this.setState({page: this.state.previous})}}/>
       </View>
+
     }else if (this.state.page === 'additi') {
       return <View style={{flex:1}}>
-      <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+        {this.renderEntete()}
       <Popup close={() => {this.setState({page: this.state.previous})}}/>
       </View>
+
     }else if (this.state.page === 'search') {
       return <View style={{flex:1}}>
-      <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
+        {this.renderEntete()}
       <SearchableList resultat={() => {this.setState({page:'info', previous: page}) }}/>
       </View>
-    }else  if (this.state.page === 'info') {
-      return <View style={{flex:1}}>
-      <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
-      <FicheDetail close={() => {this.setState({page: this.state.previous})}}/>
-      </View>
+
+    // }else  if (this.state.page === 'info') {
+    //   return <View style={{flex:1}}>
+    //     {this.renderEntete()}
+    //   <FicheDetail close={() => {this.setState({page: this.state.previous})}}/>
+    //   </View>
+
     }else {
       return <View style={{flex:1}}>
-        <Entete search={() => {this.setState({page:'search'}) }} map={() => {this.setState({page:'map'})}}/>
+        {this.renderEntete()}
         <Home OuestFrance={() => {this.setState({page:'ouestfrance'}) }} Additi={() => {this.setState({page:'additi'}) }}/>
       </View>
     }
