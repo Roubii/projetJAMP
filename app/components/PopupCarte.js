@@ -6,13 +6,12 @@ export default class PopupCarte extends Component {
   render () {
     let item = this.props.donnees;
     return(
-      
       <View style={styles.container}>
         <Text style={styles.societe}>{item.societe}</Text>
         <Text style={styles.type}>{item.type}</Text>
         <Text>{item.adresse}</Text>
         <Text>{item.codepostal} {item.ville.toUpperCase()}</Text>
-        <TouchableOpacity onPress={this.props.info}><Text style={styles.info}>Plus d'infos...</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.sendAdresse(item)}><Text style={styles.info}>Plus d'infos...</Text></TouchableOpacity>
       </View>
       
     )

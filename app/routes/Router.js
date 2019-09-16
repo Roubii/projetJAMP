@@ -8,7 +8,6 @@ import Map from '../components/Map';
 import SearchableList from '../components/SearchableList';
 import FicheDetail from '../components/FicheDetail';
 
-
 export default class Router extends Component {
   constructor () {
     super();
@@ -40,8 +39,10 @@ export default class Router extends Component {
     if(this.state.page === 'map') {
       return <View style={{flex:1}}>
         <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false, previous: page}) }} map={() => {this.setState({page:'map', previous: page})}}/>
-        <Map annotations={() => {this.setState({page:'info', previous: page}) }}/>
-      </View>
+       <View style={{flex:1, }}>
+       <Map annotations={() => {this.setState({page:'info', previous: page}) }}/>
+       </View>
+      </View> 
     } else if (this.state.page === 'ouestfrance') {
       return <View style={{flex:1}}>
       <Entete search={() => {this.setState({page:'search', previous: page}) }} home={() => {this.setState({page:false}) }} map={() => {this.setState({page:'map'})}}/>
