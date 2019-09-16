@@ -43,7 +43,9 @@ export default class Map extends Component {
 				</Mapbox.MapView>	
 				{
 					(this.state.detailAdress) &&
-						<FicheDetail element={this.state.detailAdress}/>
+					<View style={styles.info}>
+						<FicheDetail close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
+					</View>
 				}
 			</View> 
 		);
@@ -72,5 +74,14 @@ const styles = StyleSheet.create({
 		borderRadius: 15,
 		backgroundColor: 'blue',
 		transform: [{ scale: 0.6 }]
+	},
+	info:{
+		position:'absolute',
+		top:'45%',
+		left:'2%',
+		width:'45%',
+		flex:1,
+		justifyContent:'center',
+		alignItems:'center',
 	}
 });

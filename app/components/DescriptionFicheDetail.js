@@ -20,11 +20,10 @@ export default class DescriptionFicheDetail extends Component {
       <View style={styles.descriptifContainer}>
             <Image style={styles.image}source={require('../img/INFOMER/logo-500x172_chasse-maree.jpg')} />
             <Text h1 style={styles.titre}>{item.societe}</Text>
-            <Text>{item.dirigeantPrenom} {item.dirigeant}</Text>
+            <Text style={{marginBottom:5}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
               <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
               <Text style={styles.paragraphe}>{item.description}</Text>
               </ScrollView>
-              <FlecheRetour retour={this.props.retour}/>
         </View>
 		);
 	}
@@ -34,22 +33,22 @@ const styles = StyleSheet.create({
 	
   descriptifContainer: {
     flex:7,
-    width: 400,
+    width: '50%',
     marginLeft:40,
-    marginTop:40
+    marginTop:10
   },
   titre: {
     fontSize: 20,
-    marginBottom:20
+    marginBottom:10
   },
   paragraphe:{
     textAlign :'justify',
-    marginBottom :10,
+    marginBottom :5,
  
   },
   image:{
-    width:250,
-    height:100,
+    width:200,
+    height:80,
     resizeMode:'cover',
     
 
