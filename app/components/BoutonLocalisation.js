@@ -31,10 +31,9 @@ const styles = StyleSheet.create({
     borderRadius:3,
     backgroundColor: '#E2001A',
     margin:10,
-    marginTop:20,
-    marginBottom:30,
+    marginBottom:100,
     justifyContent:'center',
-   alignItems:'center'
+    alignItems:'center'
   },
   text:{
     fontSize: 16,
