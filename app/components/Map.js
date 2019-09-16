@@ -47,6 +47,7 @@ export default class Map extends Component {
 						<FicheDetail close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
 					</View>
 				}
+					<Filter/>
 			</View> 
 		);
 	}
