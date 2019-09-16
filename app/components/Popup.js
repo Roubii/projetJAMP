@@ -19,7 +19,7 @@ export default class Popup extends Component {
 		return (
 			<View style={styles.container}>
         <View style={styles.PopupContainer}>
-        <BoutonClose bouton={this.props.close}/>
+        <BoutonClose close={this.props.close}/>
           <View style={styles.PopupSousContainer}>
            <Description/>
            <View style={styles.divider}></View>
