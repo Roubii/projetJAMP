@@ -10,7 +10,7 @@ const PLACES = [
     dirigeant: "BALLARD",
     dirigeantPrenom: "Guillaume",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -23,7 +23,7 @@ const PLACES = [
     dirigeant: "BALLARD",
     dirigeantPrenom: "Guillaume",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -36,7 +36,7 @@ const PLACES = [
     dirigeant: "BALLARD",
     dirigeantPrenom: "Guillaume",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -49,7 +49,7 @@ const PLACES = [
     dirigeant: "BALLARD",
     dirigeantPrenom: "Guillaume",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -62,7 +62,7 @@ const PLACES = [
     dirigeant: "BALLARD",
     dirigeantPrenom: "Guillaume",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -75,7 +75,7 @@ const PLACES = [
     dirigeant: "BALLARD",
     dirigeantPrenom: "Guillaume",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -88,7 +88,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -101,7 +101,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -114,7 +114,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -127,7 +127,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -140,7 +140,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -153,7 +153,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -166,7 +166,7 @@ const PLACES = [
     dirigeant: "BIGORGNE",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -179,7 +179,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -192,7 +192,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -205,7 +205,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -218,7 +218,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -231,7 +231,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -244,7 +244,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -257,7 +257,7 @@ const PLACES = [
     dirigeant: "GOUÉROU",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -270,7 +270,7 @@ const PLACES = [
     dirigeant: "ECHELARD",
     dirigeantPrenom: "Louis",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -283,7 +283,7 @@ const PLACES = [
     dirigeant: "JARNIGON",
     dirigeantPrenom: "Vincent",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -296,7 +296,7 @@ const PLACES = [
     dirigeant: "JARNIGON",
     dirigeantPrenom: "Vincent",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -309,7 +309,7 @@ const PLACES = [
     dirigeant: "JARNIGON",
     dirigeantPrenom: "Vincent",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -322,7 +322,7 @@ const PLACES = [
     dirigeant: "JARNIGON",
     dirigeantPrenom: "Vincent",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -335,7 +335,7 @@ const PLACES = [
     dirigeant: "JARNIGON",
     dirigeantPrenom: "Vincent",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -348,7 +348,7 @@ const PLACES = [
     dirigeant: "WAJDZIK",
     dirigeantPrenom: "Arnaud",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -361,7 +361,7 @@ const PLACES = [
     dirigeant: "WAJDZIK",
     dirigeantPrenom: "Arnaud",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -374,7 +374,7 @@ const PLACES = [
     dirigeant: "WAJDZIK",
     dirigeantPrenom: "Arnaud",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -387,7 +387,7 @@ const PLACES = [
     dirigeant: "WAJDZIK",
     dirigeantPrenom: "Arnaud",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -400,7 +400,7 @@ const PLACES = [
     dirigeant: "WAJDZIK",
     dirigeantPrenom: "Arnaud",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "SIGL",
@@ -426,7 +426,7 @@ const PLACES = [
     dirigeant: "GUERIN",
     dirigeantPrenom: "Benoit",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -439,7 +439,7 @@ const PLACES = [
     dirigeant: "GUERIN",
     dirigeantPrenom: "Benoit",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -452,7 +452,7 @@ const PLACES = [
     dirigeant: "DENOYELLE",
     dirigeantPrenom: "Nicolas",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -465,7 +465,7 @@ const PLACES = [
     dirigeant: "DENOYELLE",
     dirigeantPrenom: "Nicolas",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -478,7 +478,7 @@ const PLACES = [
     dirigeant: "DENOYELLE",
     dirigeantPrenom: "Nicolas",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -491,7 +491,7 @@ const PLACES = [
     dirigeant: "DENOYELLE",
     dirigeantPrenom: "Nicolas",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -504,7 +504,7 @@ const PLACES = [
     dirigeant: "DENOYELLE",
     dirigeantPrenom: "Nicolas",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -517,7 +517,7 @@ const PLACES = [
     dirigeant: "LE BLOA",
     dirigeantPrenom: "Alan",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -530,7 +530,7 @@ const PLACES = [
     dirigeant: "LE BLOA",
     dirigeantPrenom: "Alan",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -543,7 +543,7 @@ const PLACES = [
     dirigeant: "LE BLOA",
     dirigeantPrenom: "Alan",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -556,7 +556,7 @@ const PLACES = [
     dirigeant: "MARTEEL",
     dirigeantPrenom: "Christel",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -569,7 +569,7 @@ const PLACES = [
     dirigeant: "MARTEEL",
     dirigeantPrenom: "Christel",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -582,7 +582,7 @@ const PLACES = [
     dirigeant: "MARTEEL",
     dirigeantPrenom: "Christel",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -594,7 +594,8 @@ const PLACES = [
     groupe: "Ouest-France",
     dirigeant: "MARTEEL",
     dirigeantPrenom: "Christel",    
-    description: ""
+    description: "",
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -607,7 +608,7 @@ const PLACES = [
     dirigeant: "MARTEEL",
     dirigeantPrenom: "Christel",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -620,7 +621,7 @@ const PLACES = [
     dirigeant: "BRIONNE",
     dirigeantPrenom: "Patrick",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -633,7 +634,7 @@ const PLACES = [
     dirigeant: "BRIONNE",
     dirigeantPrenom: "Patrick",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -646,7 +647,7 @@ const PLACES = [
     dirigeant: "BRIONNE",
     dirigeantPrenom: "Patrick",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -659,7 +660,7 @@ const PLACES = [
     dirigeant: "ROBIN",
     dirigeantPrenom: "Claire",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -672,7 +673,7 @@ const PLACES = [
     dirigeant: "ROBIN",
     dirigeantPrenom: "Claire",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -685,7 +686,7 @@ const PLACES = [
     dirigeant: "ROBIN",
     dirigeantPrenom: "Claire",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -698,7 +699,7 @@ const PLACES = [
     dirigeant: "VERNAY",
     dirigeantPrenom: "Stéphane",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -711,7 +712,7 @@ const PLACES = [
     dirigeant: "BARDY",
     dirigeantPrenom: "Céline",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -724,7 +725,7 @@ const PLACES = [
     dirigeant: "BARDY",
     dirigeantPrenom: "Céline",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -737,7 +738,7 @@ const PLACES = [
     dirigeant: "BARDY",
     dirigeantPrenom: "Céline",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -750,7 +751,7 @@ const PLACES = [
     dirigeant: "BARDY",
     dirigeantPrenom: "Céline",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -763,7 +764,7 @@ const PLACES = [
     dirigeant: "BARDY",
     dirigeantPrenom: "Céline",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -776,7 +777,7 @@ const PLACES = [
     dirigeant: "BARDY",
     dirigeantPrenom: "Céline",    
     description: "",
-    logo:'../img/logo-500x172_OF_Rouge.jpg'
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Precom",
@@ -789,7 +790,7 @@ const PLACES = [
     dirigeant: "Lelièvre/Phillibert",
     dirigeantPrenom: "Patrick/Christian",    
     description: "",
-    logo:'../img/PRECOM/logo-500x172_precom.jpg'
+    logo:require('../img/PRECOM/logo-500x172_precom.jpg')
   },
   {
     societe: "Régie Radio Régions",
@@ -802,7 +803,7 @@ const PLACES = [
     dirigeant: "Porcher",
     dirigeantPrenom: "Laurent",    
     description: "",
-    logo:'../img/REGIE-RADIOS-REGION/logo-500x172_regie-radios-regions.jpg'
+    logo:require('../img/REGIE-RADIOS-REGION/logo-500x172_regie-radios-regions.jpg')
   },
   {
     societe: "Medialex",
@@ -815,7 +816,7 @@ const PLACES = [
     dirigeant: "Colin",
     dirigeantPrenom: "Olivier",    
     description: "",
-    logo:'../img/Medialex.png'
+    logo:require('../img/Medialex.png')
   },
   {
     societe: "Happy Prod",
@@ -828,7 +829,7 @@ const PLACES = [
     dirigeant: "Connehaye",
     dirigeantPrenom: "Romain",    
     description: "",
-    logo:'../img/Happy Prod.png'
+    logo:require('../img/Happy Prod.png')
   },
   {
     societe: "Affiouest",
@@ -841,7 +842,7 @@ const PLACES = [
     dirigeant: "Le Bail",
     dirigeantPrenom: "Remy",    
     description: "",
-    logo:'../img/Affiouest.jpg'
+    logo:require('../img/Affiouest.jpg')
   },
   {
     societe: "Precontact",
@@ -854,7 +855,7 @@ const PLACES = [
     dirigeant: "Duru",
     dirigeantPrenom: "Joël",    
     description: "",
-    logo:'../img/Precontact.png'
+    logo:require('../img/Precontact.png')
   },
   {
     societe: "Ouest-FranceM",
@@ -867,7 +868,7 @@ const PLACES = [
     dirigeant: "Philibert",
     dirigeantPrenom: "Christian",    
     description: "",
-    logo:'../img/logo-500x172_ouest-france-multimedia.jpg'
+    logo:require('../img/logo-500x172_ouest-france-multimedia.jpg')
   },
   {
     societe: "Nantes Media",
@@ -880,7 +881,7 @@ const PLACES = [
     dirigeant: "Oger",
     dirigeantPrenom: "Yann",    
     description: "",
-    logo:'../img/Medialex.png'
+    logo:require('../img/Medialex.png')
   },
   {
     societe: "Dans nos coeurs",
@@ -893,7 +894,7 @@ const PLACES = [
     dirigeant: "Tricart",
     dirigeantPrenom: "Anne-Sophie",    
     description: "",
-    logo:'../img/Dans_nos_cœurs.jpg'
+    logo:require('../img/Dans_nos_cœurs.jpg')
   },
   {
     societe: "Infomer",
@@ -906,7 +907,7 @@ const PLACES = [
     dirigeant: "Boucher",
     dirigeantPrenom: "Jean-Paul",    
     description: "Infomer est une filiale du groupe SIPA - Ouest-France, créée le 1er janvier 1990, spécialisée dans la presse maritime en France.",
-    logo:'../img/INFOMER/logo-500x172_infomer.jpg'
+    logo:require('../img/INFOMER/logo-500x172_infomer.jpg')
   },
   {
     societe: "Le Marin",
@@ -919,7 +920,7 @@ const PLACES = [
     dirigeant: "Boucher",
     dirigeantPrenom: "Jean-Paul",    
     description: "Le Marin est un journal hebdomadaire, spécialisé dans les informations maritimes, dont le siège est à Rennes. Il appartient au Groupe Ouest-France.",
-    logo:'../img/INFOMER/logo-500x172_le-marin.jpg'
+    logo:require('../img/INFOMER/logo-500x172_le-marin.jpg')
   },
   {
     societe: "Produits de la Mer",
@@ -932,7 +933,7 @@ const PLACES = [
     dirigeant: "Boucher",
     dirigeantPrenom: "Jean-Paul",    
     description: "Les produits de la mer désignent les animaux ou plantes qui sont consommés par les êtres humains. Ils comprennent les animaux marins, comme les poissons, mammifères, fruits de mer, ainsi que les algues et plantes marines.",
-    logo:'../img/logo-pdm.png'
+    logo:require('../img/logo-pdm.png')
   },
   {
     societe: "Chasse Marée",
@@ -945,7 +946,7 @@ const PLACES = [
     dirigeant: "Boucher",
     dirigeantPrenom: "Jean-Paul",    
     description: "Chasse-Marée est un magazine français qui paraît neuf fois par an, et une maison d'édition, cré en 1981 par la société coopérative ouvrière de production Le Chasse-Marée à Douarnenez.",
-    logo:'../img/INFOMER/logo-500x172_chasse-maree.jpg'
+    logo:require('../img/INFOMER/logo-500x172_chasse-maree.jpg')
   },
   {
     societe: "Voiles et Voiliers",
@@ -958,7 +959,7 @@ const PLACES = [
     dirigeant: "Boucher",
     dirigeantPrenom: "Jean-Paul",    
     description: "Créé en 1971, Voiles et Voiliers est un magazine mensuel français consacré à la voile sportive et de plaisance. Le magazine édite également des numéros hors-série et une collection d'ouvrages consacrés à la voile.",
-    logo:'../img/logo-500x172_voiles-et-voiliers.jpg'
+    logo:require('../img/logo-500x172_voiles-et-voiliers.jpg')
   },
   {
     societe: "Edilarge",
@@ -971,7 +972,7 @@ const PLACES = [
     dirigeant: "Boucher",
     dirigeantPrenom: "Jean-Paul",    
     description: "Edition de livres. Depuis plus de quarante ans, les éditions Ouest-France s’imposent comme l’éditeur des régions. Loin de se limiter au grand ouest, elles participent activement à la mise en valeur du patrimoine culturel, local, régional et national. Du tourisme à l’histoire en passant par les arts, la peinture mais aussi les thématiques pratiques, 150 nouveautés sont publiées par an. Presque une trentaine de beaux-livres viennent enrichir chaque année un catalogue de 1800 titres et de 2000 auteurs tous spécialistes dans leurs domaines .Rigueur de l’information et qualité de l’iconographie.",
-    logo:'../img/logo-500x172_editions-ouest-france.jpg'
+    logo:require('../img/logo-500x172_editions-ouest-france.jpg')
   }
 ]
 

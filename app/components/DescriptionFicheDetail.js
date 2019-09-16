@@ -17,7 +17,7 @@ export default class DescriptionFicheDetail extends Component {
     let item = this.props.element;
 		return (
       <View style={styles.descriptifContainer}>
-            <Image style={styles.image}source={require('../img/INFOMER/logo-500x172_chasse-maree.jpg')} />
+            <Image style={styles.image} source={item.logo} />
             <Text h1 style={styles.titre}>{item.societe}</Text>
             <Text style={{marginBottom:5}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
               <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     width:200,
     height:80,
     resizeMode:'cover',
-    
+    marginTop:-20
 
   }
 });
