@@ -3,6 +3,7 @@ import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-nativ
 import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
 import FicheDetail from './FicheDetail'
+import DetailRecherche from './DetailRecherche';
 
 
 class SearchableList extends Component {
@@ -123,7 +124,7 @@ this.setState({
       {
       (this.state.detailAdress) &&
         <View style={styles.info}>
-          <FicheDetail close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
+          <DetailRecherche close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
         </View>
       }
       </View>
@@ -133,9 +134,10 @@ this.setState({
 const styles = StyleSheet.create({
 	info:{
 		position:'absolute',
-		top:'5%',
+		top:'0%',
 		left:'0%',
-		width:'45%',
+    width:'100%',
+    height:'100%',
 		flex:1,
 		justifyContent:'center',
 		alignItems:'center',
