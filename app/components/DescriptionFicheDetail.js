@@ -26,7 +26,7 @@ export default class DescriptionFicheDetail extends Component {
               Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant pra 
               </Text>
               </ScrollView>
-              <FlecheRetour/>
+              <FlecheRetour retour={this.props.retour}/>
         </View>
 		);
 	}

@@ -13,7 +13,7 @@ export default class BoutonClose extends Component {
 	
 	render() {
 		return (
-       <TouchableOpacity>
+      <TouchableOpacity onPress={this.props.bouton}>
          <Image source={require('../img/BOUTONS/close.png')} style={styles.image} />
        </TouchableOpacity>
 		)
@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
     width:30,
     height:30,
     resizeMode:'contain',
+    marginLeft:1080,
+    marginTop:10
   }
 });
 

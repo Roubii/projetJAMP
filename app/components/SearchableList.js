@@ -4,6 +4,7 @@ import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
 import Recherche from './Recherche';
 
+
 class SearchableList extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +13,7 @@ class SearchableList extends Component {
       loading: false,
       data: PLACES,
       error: null,
+      value: ''
     };
 
     this.arrayholder = PLACES;
@@ -19,28 +21,43 @@ class SearchableList extends Component {
 
   renderSeparator = () => {
     return (
-      <View
-        style={{
-          height: 1,
-          width: '86%',
-          backgroundColor: '#CED0CE',
-          marginLeft: '14%',
-        }}
-      />
+      <View style={{height: 1, width: '100%', backgroundColor: '#CED0CE'}}/>
     );
   };
 
+  neutralText (txt) {
+    txt = txt.toLowerCase();
+    txt = txt.replace(/(é|è|e|ë|ê)/g,"e");
+    txt = txt.replace(/(à|á|â|ã|ä|å)/g,"a");
+    txt = txt.replace(/(æ)/g,"ae");
+    txt = txt.replace(/(ç)/g,"c");
+    txt = txt.replace(/(ì|í|î|ï)/g,"i");               
+    txt = txt.replace(/(ò|ó|ô|õ|ö)/g,"o");
+    txt = txt.replace(/(ù|ú|û|ü)/g,"u");
+      return txt;
+  }
+
   searchFilterFunction = text => {
     this.setState({
-      value: text,
+      value: text
     });
 
     const newData = this.arrayholder.filter(item => {
-      const itemData = `${item.societe.toUpperCase()} ${item.ville.toUpperCase()}`;
-      const textData = text.toUpperCase();
-      
 
-      return itemData.indexOf(textData) > -1;
+      let toInspect = JSON.stringify(item); 
+      toInspect = this.neutralText(toInspect);
+
+      let textData = this.neutralText(text); 
+      textData = textData.trim(); 
+      textData = textData.split(' ');
+      let hasWord = true;
+      for (let i =0; i < textData.length; i++) {
+
+        if (toInspect.match(textData[i]) == null) {
+          hasWord = false;
+        }
+      }
+      return hasWord;
     });
     this.setState({
       data: newData,
@@ -55,11 +72,11 @@ class SearchableList extends Component {
       inputContainerStyle={{backgroundColor: '#fff', borderRadius: 15, borderColor:'red', borderWidth: 2, borderBottomColor:'red', borderBottomWidth: 2}}
       containerStyle={{backgroundColor: 'transparent'}}
       inputStyle={{borderWidth: 0, borderColor: 'transparent', flex:1}}
-       lightTheme
-       round
-       onChangeText={text => this.searchFilterFunction(text)}
-       autoCorrect={false}
-       value={this.state.value}
+      lightTheme
+      round
+      onChangeText={text => this.searchFilterFunction(text)}
+      autoCorrect={false}
+      value={this.state.value}
       />
     );
   };
@@ -78,8 +95,9 @@ class SearchableList extends Component {
           data={this.state.data}
           renderItem={({ item }) => (
             <ListItem
-              title={`${item.societe}`}
+              title={`${item.type} ${item.societe} `}
               subtitle={`${item.adresse} ${item.codepostal} ${item.ville}`}
+              onPress={this.props.resultat}
             />
           )}
           keyExtractor={(item, index) => String(index)}

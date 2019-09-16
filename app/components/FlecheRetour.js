@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet} from 'react-native';
+import { View, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 
@@ -16,7 +16,7 @@ export default class FlecheRetour extends Component {
 	render() {
 		return (
      <View >
-       <Icon style={styles.icon} name='arrowleft' color='#E2001A' size={35}/> 
+       <TouchableOpacity onPress={this.props.retour}><Icon style={styles.icon} name='arrowleft' color='#E2001A' size={35}/></TouchableOpacity> 
      </View>
 		)
 	}
