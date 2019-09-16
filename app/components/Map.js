@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 import Annotations from './Annotations';
 import Filter from './Filters';
+import FicheDetail from './FicheDetail';
 
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
@@ -42,7 +43,7 @@ export default class Map extends Component {
 				</Mapbox.MapView>	
 				{
 					(this.state.detailAdress) &&
-						<Filter/>
+						<FicheDetail element={this.state.detailAdress}/>
 				}
 			</View> 
 		);

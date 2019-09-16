@@ -15,16 +15,14 @@ export default class DescriptionFicheDetail extends Component {
   }
 	
 	render() {
+    let item = this.props.element;
 		return (
       <View style={styles.descriptifContainer}>
             <Image style={styles.image}source={require('../img/INFOMER/logo-500x172_chasse-maree.jpg')} />
-            <Text h1 style={styles.titre}>Descriptif</Text>
+            <Text h1 style={styles.titre}>{item.societe}</Text>
+            <Text>{item.dirigeantPrenom} {item.dirigeant}</Text>
               <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
-              <Text style={styles.paragraphe}>Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. 
-              Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.
-              cquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.
-              Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant pra 
-              </Text>
+              <Text style={styles.paragraphe}>{item.description}</Text>
               </ScrollView>
               <FlecheRetour retour={this.props.retour}/>
         </View>
@@ -52,7 +50,7 @@ const styles = StyleSheet.create({
   image:{
     width:250,
     height:100,
-    resizeMode:'contain',
+    resizeMode:'cover',
     
 
   }

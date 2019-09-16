@@ -6,18 +6,16 @@ import BoutonLocalisationSmall from './BoutonLocalisationSmall';
 
 
 export default class FicheDetailAdresse extends Component {
-  constructor () {
-    super();
-    this.state ={
-
-    }
+  constructor (props) {
+    super(props);
   }
 	
 	render() {
+    let item = this.props.element;
 		return (
     <View style={styles.contentContainer}>
-    <Text h2 style={styles.titreAdresse}>Rédaction</Text>
-    <Text style={styles.adresse}>13 rue du Breil {"\n"}35063 RENNES</Text>
+    <Text h2 style={styles.titreAdresse}>{item.type}</Text>
+    <Text style={styles.adresse}>{item.adresse}{"\n"}{item.codepostal} {item.ville}</Text>
     <BoutonLocalisationSmall/>
     </View>
 		);

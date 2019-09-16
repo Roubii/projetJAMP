@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import Filiales from './Filiales';
 import DescriptionFicheDetail from './DescriptionFicheDetail';
 import FicheDetailAdresse from './FicheDetailAdresse';
 
@@ -8,23 +7,19 @@ import FicheDetailAdresse from './FicheDetailAdresse';
 
 
 export default class FicheDetail extends Component {
-  constructor () {
-    super();
-    this.state ={
-
+  	constructor (props) {
+      super(props);
     }
-  }
-	
 	render() {
 		return (
 			<View style={styles.container}>
         
           <View style={styles.PopupContainer}>
          
-           <DescriptionFicheDetail retour={this.props.close}/>
+           <DescriptionFicheDetail element={this.props.element} retour={this.props.close}/>
            <View style={styles.divider}></View>
        
-           <FicheDetailAdresse/>
+           <FicheDetailAdresse element={this.props.element}/>
         
           </View>
 			</View>
@@ -41,8 +36,8 @@ const styles = StyleSheet.create({
   },
 	PopupContainer: {
     flex: 1,
-		width: 800,
-		height:450,
+		width: '80%',
+		height:'100%',
 		alignItems: 'center',
 		justifyContent: 'center',
     backgroundColor: 'white',
