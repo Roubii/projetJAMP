@@ -3,6 +3,7 @@ import { View, Text, FlatList, ActivityIndicator } from 'react-native';
 import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
 import Recherche from './Recherche';
+import Icons from 'react-native-vector-icons/Ionicons'
 
 
 class SearchableList extends Component {

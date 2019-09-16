@@ -40,10 +40,7 @@ export default class Map extends Component {
 							
 					<Annotations sendAdresse={this.getAdresse.bind(this)} popup={this.props.annotations}/>
 				</Mapbox.MapView>	
-				{
-					(this.state.detailAdress) &&
-						<Filter/>
-				}
+					<Filter/>
 			</View> 
 		);
 	}
