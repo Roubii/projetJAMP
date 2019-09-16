@@ -10,7 +10,7 @@ render() {
     return (
       <View style={styles.container}>
        <View style={styles.RectangleShapeView} >
-         <TouchableOpacity onPress={this.props.home}><Image source={require('../img/logoouestfrance.png')} style={styles.Image} /></TouchableOpacity>
+         <TouchableOpacity onPress={this.props.home}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.Image} /></TouchableOpacity>
             <View style={{ width: 350, marginRight: 50, flexDirection: "row"}}>
               <View  style={{ width: 300, }}>
                 <TouchableOpacity onPress={this.props.search}><Recherche/></TouchableOpacity>
@@ -19,7 +19,6 @@ render() {
           </View>
          </View> 
       </View>
-
     );
   }
 }
@@ -42,9 +41,8 @@ const styles = StyleSheet.create({
 
  Image: {
    width:150,
-   height:60,
+   height:63,
    resizeMode:"cover",
-   marginLeft:30,
  },
 
 logoRouge: {
