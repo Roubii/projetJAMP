@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, ActivityIndicator } from 'react-native';
+import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
 import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
-import Recherche from './Recherche';
+import FicheDetail from './FicheDetail'
 
 
 class SearchableList extends Component {
@@ -13,11 +13,19 @@ class SearchableList extends Component {
       loading: false,
       data: PLACES,
       error: null,
-      value: ''
+      value: '',
+      detailAdress: false
     };
 
     this.arrayholder = PLACES;
   }
+
+
+getAdresse (adresse) {
+this.setState({
+  detailAdress: adresse
+})
+}
 
   renderSeparator = () => {
     return (
@@ -105,16 +113,33 @@ class SearchableList extends Component {
             <ListItem
               title={`${item.type} ${item.societe} `}
               subtitle={`${item.adresse} ${item.codepostal} ${item.ville}`}
-              onPress={this.props.resultat}
+              onPress={() => this.getAdresse(item)}
             />
           )}
           keyExtractor={(item, index) => String(index)}
           ItemSeparatorComponent={this.renderSeparator}
           ListHeaderComponent={this.renderHeader}
         />
+      {
+      (this.state.detailAdress) &&
+        <View style={styles.info}>
+          <FicheDetail close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
+        </View>
+      }
       </View>
     );
   }
 }
+const styles = StyleSheet.create({
+	info:{
+		position:'absolute',
+		top:'5%',
+		left:'0%',
+		width:'45%',
+		flex:1,
+		justifyContent:'center',
+		alignItems:'center',
+	}
+});
 
 export default SearchableList;
