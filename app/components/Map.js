@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 import Annotations from './Annotations';
+import Filter from './Filters';
 
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
@@ -9,9 +10,24 @@ Mapbox.setAccessToken(
 
 export default class Map extends Component {
 
+
+	constructor (props) {
+		super(props);
+		this.state = {
+			detailAdress: false
+		}
+	}
+
+	getAdresse (adresse) {
+		this.setState({
+			detailAdress: adresse
+		})
+	}
+
 	render() {
 		return (
 			<View style={styles.container}>
+			
 				<Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}
@@ -22,8 +38,12 @@ export default class Map extends Component {
 								centerCoordinate={[-1, 48.08]}
               />
 							
-					<Annotations popup={this.props.annotations}/>
-				</Mapbox.MapView>
+					<Annotations sendAdresse={this.getAdresse.bind(this)} popup={this.props.annotations}/>
+				</Mapbox.MapView>	
+				{
+					(this.state.detailAdress) &&
+						<Filter/>
+				}
 			</View> 
 		);
 	}

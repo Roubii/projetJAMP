@@ -5,8 +5,8 @@ import PLACES from '../consts/Places';
 import PopupCarte from './PopupCarte';
 
 export default class Annotations extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       items : PLACES,
     }
@@ -21,7 +21,7 @@ export default class Annotations extends Component {
     id={'PointAnnotation'+k}
     coordinate={item.coordonnees}>
     <Mapbox.Callout>
-      <PopupCarte donnees={item} info={this.props.popup}/>
+      <PopupCarte sendAdresse={this.props.sendAdresse} donnees={item} info={this.props.popup}/>
     </Mapbox.Callout>
     </Mapbox.PointAnnotation>)}
   </View>
