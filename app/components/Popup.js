@@ -21,10 +21,10 @@ export default class Popup extends Component {
         <View style={styles.PopupContainer}>
         <BoutonClose close={this.props.close}/>
           <View style={styles.PopupSousContainer}>
-           <Description/>
+           <Description group={this.props.group}/>
            <View style={styles.divider}></View>
             <View style={styles.blocGauche}>
-              <Filiales/>
+              <Filiales group={this.props.group} />
             </View>
           </View>
         </View>

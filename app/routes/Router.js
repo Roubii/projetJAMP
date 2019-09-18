@@ -54,30 +54,18 @@ export default class Router extends Component {
         <Map annotations={() => {this.setState({page:'info', previous: page}) }}/>
       </View>
 
-    } else if (this.state.page === 'ouestfrance') {
+    } else if (this.state.page === 'ouestfrance' || this.state.page === 'additi') {
       return <View style={{flex:1}}>
         {this.renderEntete()}
-      <Popup close={() => {this.setState({page: this.state.previous})}}/>
+      <Popup group={this.state.page} close={() => {this.setState({page: this.state.previous})}}/>
       </View>
 
-    }else if (this.state.page === 'additi') {
-      return <View style={{flex:1}}>
-        {this.renderEntete()}
-      <Popup close={() => {this.setState({page: this.state.previous})}}/>
-      </View>
-
-    }else if (this.state.page === 'search') {
+    } else if (this.state.page === 'search') {
       return <View style={{flex:1}}>
         {this.renderEntete()}
       <SearchableList resultat={() => {this.setState({page:'info', previous: page}) }}/>
       </View>
-
-    // }else  if (this.state.page === 'info') {
-    //   return <View style={{flex:1}}>
-    //     {this.renderEntete()}
-    //   <FicheDetail close={() => {this.setState({page: this.state.previous})}}/>
-    //   </View>
-
+      
     }else {
       return <View style={{flex:1}}>
         {this.renderEntete()}
