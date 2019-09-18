@@ -4,6 +4,7 @@ import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
 import FicheDetail from './FicheDetail'
 import DetailRecherche from './DetailRecherche';
+import ResultatRecherche from './ResultatRecherche';
 
 
 class SearchableList extends Component {
@@ -124,7 +125,7 @@ this.setState({
       {
       (this.state.detailAdress) &&
         <View style={styles.info}>
-          <DetailRecherche close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
+          <ResultatRecherche close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
         </View>
       }
       </View>
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
 		flex:1,
 		justifyContent:'center',
 		alignItems:'center',
-	}
+  },
 });
 
 export default SearchableList;
