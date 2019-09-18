@@ -3,21 +3,18 @@ import { View, StyleSheet, Text } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 import PLACES from '../consts/Places';
 import PopupCarte from './PopupCarte';
-import FicheDetail from './FicheDetail';
 
 export default class Annotations extends Component {
   constructor(props){
     super(props);
     this.state = {
-      items : PLACES,
-      page : 'carte'
+
     }
   }
   render (){
-    let items = this.state.items
+    let items = this.props.data
   return (
 
-    (this.state.page === 'carte') ?
     <View style={styles.container}>
       {items.map((item,k) => 
     <Mapbox.PointAnnotation
@@ -25,15 +22,12 @@ export default class Annotations extends Component {
     id={'PointAnnotation'+k}
     coordinate={item.coordonnees}>
     <Mapbox.Callout>
-      <PopupCarte sendAdresse={this.props.sendAdresse} donnees={item} info={this.props.popup}/>
+      <PopupCarte sendAdresse={this.props.sendAdresse} donnees={item}/>
     </Mapbox.Callout>
     </Mapbox.PointAnnotation>
     )}
   </View>
-  :
-  <View style={styles.container}>
-    <FicheDetail style={styles.fiche}/>
-  </View>
+
   )}
 }
 

@@ -4,19 +4,21 @@ import Mapbox from '@react-native-mapbox-gl/maps';
 import Annotations from './Annotations';
 import Filter from './Filters';
 import FicheDetail from './FicheDetail';
+import PLACES from '../consts/Places';
 
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
 );
 
 export default class Map extends Component {
-
-
 	constructor (props) {
 		super(props);
 		this.state = {
-			detailAdress: false
+			detailAdress: false,
+
+      data: PLACES,
 		}
+		this.arrayholder = PLACES;
 	}
 
 	getAdresse (adresse) {
@@ -25,6 +27,21 @@ export default class Map extends Component {
 		})
 	}
 
+  searchFilterFunction = (text, context) => {
+
+    const newData = this.arrayholder.filter(item => {
+			let hasFilter = false;
+			if (item[context] === text || item[context].match(text) != null) {
+				hasFilter = true;	
+			}
+			return hasFilter;
+		});
+		
+    this.setState({
+      data: newData,
+		});
+  };
+
 	render() {
 		return (
 			<View style={styles.container}>
@@ -32,14 +49,13 @@ export default class Map extends Component {
 				<Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}
-					rotateEnabled={false}
-					maxZoomLevel={4}>
+					rotateEnabled={false}>
               <Mapbox.Camera
                 zoomLevel={6.5}
 								centerCoordinate={[-1, 48.08]}
               />
 							
-					<Annotations sendAdresse={this.getAdresse.bind(this)} popup={this.props.annotations}/>
+					<Annotations data={this.state.data} sendAdresse={this.getAdresse.bind(this)}/>
 				</Mapbox.MapView>	
 				{
 					(this.state.detailAdress) &&
@@ -47,7 +63,7 @@ export default class Map extends Component {
 						<FicheDetail close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
 					</View>
 				}
-					<Filter/>
+					<Filter filtre={this.searchFilterFunction.bind(this)}/>
 			</View> 
 		);
 	}

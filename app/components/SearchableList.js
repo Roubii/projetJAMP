@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
 import { ListItem, SearchBar } from 'react-native-elements';
 import PLACES from '../consts/Places'
-import FicheDetail from './FicheDetail'
-import DetailRecherche from './DetailRecherche';
 import ResultatRecherche from './ResultatRecherche';
 
 
@@ -59,6 +57,7 @@ this.setState({
         societe: item.societe,
         codepostal: item.codepostal,
         ville: item.ville,
+        groupe: item.groupe,
       }
 
       let toInspect = JSON.stringify(item2); 

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { View, StyleSheet, Text, Animated, TouchableOpacity, Alert, Dimensions } from 'react-native';
-import { genericTypeAnnotation } from '@babel/types';
+import { View, StyleSheet, Text, Animated, TouchableOpacity, Dimensions } from 'react-native';
 import Icons from 'react-native-vector-icons/Ionicons'
 
 let {width} = Dimensions.get('screen');
@@ -33,14 +32,14 @@ export default class Filter extends Component {
       this.state.left,
       {
         toValue: 0,
-        duration: 1000,
+        duration: 800,
       }
     ).start()
     Animated.timing(
       this.state.btnright,
       {
         toValue: (width * .3),
-        duration: 1000,
+        duration: 800,
       }
     ).start()
     
@@ -50,14 +49,14 @@ export default class Filter extends Component {
       this.state.left,
       {
         toValue: -(width * .3),
-        duration: 1000,
+        duration: 800,
       }
     ).start()
     Animated.timing(
       this.state.btnright,
       {
         toValue: 0,
-        duration: 1000,
+        duration: 800,
       }
     ).start()
     
@@ -68,6 +67,30 @@ export default class Filter extends Component {
       <Fragment>
         <Animated.View style={[styles.container, {right: this.state.left}]}>
 
+          <View style={styles.containerFilter}>
+
+            <Text style={styles.groupFilter}>Groupe : </Text>
+
+            <View>
+            <TouchableOpacity onPress={() => this.props.filtre('Ouest-France', 'groupe')}><Text style={styles.textFilter}>Ouest-France</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.filtre('Additi', 'groupe')}><Text style={styles.textFilter}>Additi</Text></TouchableOpacity>
+            </View>
+
+          </View>
+
+          <View style={styles.containerFilter}>
+
+            <Text style={styles.groupFilter}>Type : </Text>
+
+            <View style={{flexWrap:'wrap'}}>
+            <TouchableOpacity onPress={() => this.props.filtre('Rédaction', 'type')}><Text style={styles.textFilter}>Rédaction</Text></TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.filtre("Imprimerie", 'type')}><Text style={styles.textFilter}>Imprimerie</Text></TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.filtre('édition', 'type')}><Text style={styles.textFilter}>Edition</Text></TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.filtre('Siège', 'type')}><Text style={styles.textFilter}>Siège</Text></TouchableOpacity>
+            </View>
+
+          </View>
+
         </Animated.View>
         <Animated.View style={[styles.myButton, {right: this.state.btnright}]}>
           <TouchableOpacity onPress={()=>this.ButtonClicked()} >
@@ -77,8 +100,6 @@ export default class Filter extends Component {
               :
               <Icons name="ios-arrow-dropleft-circle" size={50} color="#000" />
             }
-         
-              {/* <Icons name={(this.state.visible)?"ios-arrow-dropright-circle":"ios-arrow-dropleft-circle"} size={50} color="#000" /> */}
 
           </TouchableOpacity>
         </Animated.View>
@@ -112,6 +133,20 @@ container: {
   borderLeftWidth: 2,
   borderLeftColor: '#b6bab6',
 },
+containerFilter : {
+  flexDirection:'row',
+  padding:20,
+},
+groupFilter : {
+  fontSize:18,
+  fontWeight:'700',
+  paddingRight:20
+},
+textFilter:{
+  fontSize:18,
+  fontWeight:'700',
+  paddingBottom:30
+}
 });
 
 

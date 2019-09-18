@@ -51,7 +51,7 @@ export default class Router extends Component {
     if(this.state.page === 'map') {
       return <View style={{flex:1}}>
         {this.renderEntete()}
-        <Map annotations={() => {this.setState({page:'info', previous: page}) }}/>
+        <Map/>
       </View>
 
     } else if (this.state.page === 'ouestfrance' || this.state.page === 'additi') {
