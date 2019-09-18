@@ -14,7 +14,7 @@ export default class BoutonLocalisation extends Component {
 	render() {
 		return (
      <View >
-       <TouchableOpacity style={styles.touchable}>
+       <TouchableOpacity onPress={this.props.mapButton} style={styles.touchable}>
         <Text style={styles.text}>Localiser l'ensemble des sociétés</Text>
        </TouchableOpacity>   
      </View>
