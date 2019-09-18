@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { View, StyleSheet, Text, Animated, TouchableOpacity, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, Animated, TouchableOpacity, Dimensions, Button } from 'react-native';
 import Icons from 'react-native-vector-icons/Ionicons'
 
 let {width} = Dimensions.get('screen');
@@ -90,6 +90,8 @@ export default class Filter extends Component {
             </View>
 
           </View>
+
+          <Button onPress={() => this.props.filtre()} title="Réinitialiser" color="#E2001A"/>
 
         </Animated.View>
         <Animated.View style={[styles.myButton, {right: this.state.btnright}]}>
