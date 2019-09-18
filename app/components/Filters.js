@@ -68,10 +68,10 @@ export default class Filter extends Component {
         <Animated.View style={[styles.container, {right: this.state.left}]}>
 
           <View style={styles.containerFilter}>
+          <Text style={styles.filtre}>Filtres</Text>
+            <Text style={styles.groupFilter}>Groupe</Text>
 
-            <Text style={styles.groupFilter}>Groupe : </Text>
-
-            <View>
+            <View style={{justifyContent:'center',alignItems:'center'}}>
             <TouchableOpacity onPress={() => this.props.filtre('Ouest-France', 'groupe')}><Text style={styles.textFilter}>Ouest-France</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => this.props.filtre('Additi', 'groupe')}><Text style={styles.textFilter}>Additi</Text></TouchableOpacity>
             </View>
@@ -80,9 +80,9 @@ export default class Filter extends Component {
 
           <View style={styles.containerFilter}>
 
-            <Text style={styles.groupFilter}>Type : </Text>
+            <Text style={styles.groupFilter}>Type</Text>
 
-            <View style={{flexWrap:'wrap'}}>
+            <View style={{justifyContent:'center',alignItems:'center'}}>
             <TouchableOpacity onPress={() => this.props.filtre('Rédaction', 'type')}><Text style={styles.textFilter}>Rédaction</Text></TouchableOpacity>
               <TouchableOpacity onPress={() => this.props.filtre("Imprimerie", 'type')}><Text style={styles.textFilter}>Imprimerie</Text></TouchableOpacity>
               <TouchableOpacity onPress={() => this.props.filtre('édition', 'type')}><Text style={styles.textFilter}>Edition</Text></TouchableOpacity>
@@ -91,7 +91,7 @@ export default class Filter extends Component {
 
           </View>
 
-          <Button onPress={() => this.props.filtre()} title="Réinitialiser" color="#E2001A"/>
+          <Button style={{fontWeight:700}}onPress={() => this.props.filtre()} title="Réinitialiser" color="#E2001A"/>
 
         </Animated.View>
         <Animated.View style={[styles.myButton, {right: this.state.btnright}]}>
@@ -127,8 +127,7 @@ container: {
   flex: 1,
   width: '30%',
   height: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
+  justifyContent:'space-between',
   backgroundColor: '#fff',
   position:"absolute",
   top:0,
@@ -136,18 +135,29 @@ container: {
   borderLeftColor: '#b6bab6',
 },
 containerFilter : {
-  flexDirection:'row',
-  padding:20,
+ justifyContent:'center',
+  
 },
 groupFilter : {
   fontSize:18,
   fontWeight:'700',
-  paddingRight:20
+  backgroundColor:'#083E98',
+  textAlign:'center',
+  width:'100%',
+  color:'white',
+  marginBottom:40,
+  padding:5
 },
 textFilter:{
   fontSize:18,
   fontWeight:'700',
-  paddingBottom:30
+  padding:15,
+},
+filtre:{
+  fontSize:30,
+  fontWeight:'700',
+  textAlign:'center',
+  padding:10
 }
 });
 
