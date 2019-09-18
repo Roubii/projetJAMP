@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 	},
 	info:{
 		position:'absolute',
-		top:'45%',
+		top:'58%',
 		left:'2%',
 		width:'45%',
 		flex:1,

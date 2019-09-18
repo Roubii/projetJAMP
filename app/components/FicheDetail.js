@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius:20,
-    minHeight:300,
+    minHeight:220,
+    paddingBottom:20,
   },
 	PopupContainer: {
     flex: 1,

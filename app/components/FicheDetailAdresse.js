@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   height:'100%',
   width:'40%',
   alignItems:'center',
+  marginTop:-50
   },
   titreAdresse:{
   fontSize:20,
