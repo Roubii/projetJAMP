@@ -5,15 +5,8 @@ import BoutonLocalisation from './BoutonLocalisation';
 
 
 
-export default class Description extends Component {
-  constructor () {
-    super();
-    this.state ={
-
-    }
-  }
-	
-	render() {
+const Description = (props) => {
+  if (props.group === 'additi'){
 		return (
       <View style={styles.descriptifContainer}>
             <Image style={styles.image}source={require('../img/Additi-logo.gif')} />
@@ -25,9 +18,24 @@ export default class Description extends Component {
               </ScrollView>
               <BoutonLocalisation/>
         </View>
-		);
-	}
+    );
+  } else if(props.group === 'ouestfrance') {
+    return (
+      <View style={styles.descriptifContainer}>
+            <Image style={styles.image}source={require('../img/logo-500x172_OF_Rouge.jpg')} />
+            <Text h1 style={styles.titre}>Ouest-France</Text>
+              <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
+              <Text style={styles.paragraphe}>Ouest-France est un quotidien régional français, édité à Rennes et vendu dans les régions de l'ouest de la France, ainsi qu'à Paris. Il est, depuis 1975, le premier quotidien français en termes de diffusion, avec en moyenne 693 794 exemplaires diffusés chaque jour en 20164. Il est édité par le groupe SIPA - Ouest-France,
+               propriété de l'Association pour le soutien des principes de la démocratie humaniste (ASPDH), contrôlée par la famille Hutin. 
+              </Text>
+              </ScrollView>
+              <BoutonLocalisation/>
+        </View>
+    );
+  }
 }
+
+export default Description;
 
 const styles = StyleSheet.create({
 	

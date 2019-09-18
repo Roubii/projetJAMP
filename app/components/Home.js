@@ -7,14 +7,10 @@ export default class Home extends Component {
       
       <View style={styles.main}>
         <Text style={styles.texte}>Les différents groupes appartenant à SIPA Ouest-France :</Text>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator>
+        <ScrollView contentContainerStyle={styles.container} horizontal={true} showsHorizontalScrollIndicator>
           <View style={styles.blocLogo}>
           <TouchableOpacity style={styles.containertouchable} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
-          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>          
-          <TouchableOpacity style={styles.containertouchable} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
-          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>      
-          <TouchableOpacity style={styles.containertouchable} onPress={this.props.OuestFrance}><Image source={require('../img/logo-500x172_OF_Rouge.jpg')} style={styles.logo}/></TouchableOpacity>
-          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>      
+          <TouchableOpacity style={styles.containertouchable} onPress={this.props.Additi}><Image source={require('../img/Additi-logo.gif')} style={styles.logo}/></TouchableOpacity>                   
           </View>
         </ScrollView>
       </View>
@@ -26,6 +22,10 @@ const styles = StyleSheet.create({
   main: {
     flex:1,
     backgroundColor:'white',
+    width:'100%',
+  },
+  container:{
+    width:'100%',
   },
   blocLogo:{  
     flex:1,  
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     justifyContent:'space-around',
     flexDirection:'row',
     alignItems:'center',
-   
   },
   logo:{
     width:400,
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
   },
   containertouchable:{
     height:150,
-    marginBottom:'5%',
+    marginBottom:'10%',
    
   }
 })
