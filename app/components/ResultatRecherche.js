@@ -19,7 +19,7 @@ export default class ResultatRecherche extends Component {
           <View style={styles.descriptifContainer}>
             <Image style={styles.image} source={item.logo} />
             <Text h1 style={styles.titre}>{item.societe}</Text>
-            <Text style={{marginBottom:5}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
+            <Text style={{marginBottom:5, fontSize:25, marginRight:'10%'}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
               <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
               <Text style={styles.paragraphe}>{item.description}</Text>
               </ScrollView>
@@ -34,6 +34,7 @@ export default class ResultatRecherche extends Component {
            
         
           </View>
+          
 			</View>
 		);
 	}
@@ -62,27 +63,32 @@ const styles = StyleSheet.create({
     height: '40%',
     borderRightWidth: 2,
     borderRightColor: 'rgb(224, 224, 224)',
-    padding:15,
+    
+    marginRight:'5%',
   },
   descriptifContainer: {
-    flex:7,
-    width: '50%',
-    marginLeft:40,
-    marginTop:10
+    flex:1,
+    marginLeft:'3%',
+    marginTop:'5%',
   },
   titre: {
-    fontSize: 20,
-    marginBottom:10
+    fontSize: 30,
+    marginTop:'5%',
+    marginRight:'10%'
   },
   paragraphe:{
     textAlign :'justify',
-    marginBottom :5, 
+    marginTop:'5%',
+    marginRight:'25%',
+    fontSize:20,
+    marginRight:'10%'
+   
   },
   image:{
-    width:200,
-    height:80,
+    width:300,
+    height:100,
     resizeMode:'cover',
-    marginTop:-30
+    marginTop:'10%'
   },
   contentContainer:{
     height:'100%',
@@ -90,12 +96,23 @@ const styles = StyleSheet.create({
     alignItems:'center',
     },
     titreAdresse:{
-    fontSize:20,
-    marginTop:'35%'
+    fontSize:30,
+    marginTop:'35%',
+    marginRight:'35%'
     },
     close: {
       color: '#E2001A',
-      fontSize:15,
+      fontSize:20,
       textDecorationLine:'underline',
-    }
+    },
+
+    adresse: {
+      marginTop:'5%',
+      marginRight:'35%',
+      fontSize:20,
+    },
+
+   
+
 });
+
