@@ -787,8 +787,8 @@ const PLACES = [
     coordonnees: [-1.6293, 48.0951],
     type: "Siège",    
     groupe: "Additi",
-    dirigeant: "Lelièvre/Phillibert",
-    dirigeantPrenom: "Patrick/Christian",    
+    dirigeant: "Patrick Lelièvre",
+    dirigeantPrenom: "Christian Phillibert et",    
     description: "",
     logo:require('../img/PRECOM/logo-500x172_precom.jpg')
   },
