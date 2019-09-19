@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, StyleSheet, Image, ScrollView, Text } from 'react-native';
 
 
 
@@ -7,7 +7,8 @@ const Filiales = (props) => {
     if (props.group === 'additi'){
 		return (
       <View style={styles.contentContainer}>
-        <ScrollView >
+        <Text style={styles.textFiliale}>Filiales</Text>
+        <ScrollView>
           <Image style={styles.image}source={require('../img/PRECOM/logo-500x172_precom-alimentation.jpg')} />
           <Image style={styles.image}source={require('../img/REGIE-RADIOS-REGION/logo-500x172_cocktail-fm.jpg')} />
           <Image style={styles.image}source={require('../img/Medialex.png')} />
@@ -24,7 +25,8 @@ const Filiales = (props) => {
 	} else if(props.group === 'ouestfrance') {
     return (
       <View style={styles.contentContainer}>
-        <ScrollView >
+      <Text style={styles.textFiliale}>Filiales</Text>
+        <ScrollView>
           <Image style={styles.image}source={require('../img/logo-500x172_OF_Rouge.jpg')} />
           <Image style={styles.image}source={require('../img/INFOMER/logo-500x172_chasse-maree.jpg')} />
           <Image style={styles.image}source={require('../img/INFOMER/logo-500x172_le-marin.jpg')} />
@@ -43,12 +45,20 @@ export default Filiales;
 const styles = StyleSheet.create({
 	contentContainer:{
   height:'80%',
- 
+  width:'100%',
+  alignItems:'center',
+  justifyContent:'center',
+  padding:40
   },
   image:{
     width:250,
     resizeMode:'contain',
-    marginLeft:20,
-    marginRight:100
+  },
+  textFiliale:{
+    fontSize:25,
+    fontWeight:'700',
+    textAlign:'center',
+    width:'100%',
+    textDecorationLine:'underline'
   }
 });
