@@ -413,7 +413,7 @@ const PLACES = [
     dirigeant: "MARTINAT",
     dirigeantPrenom: "Renaud",    
     description: "",
-    logo:''
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
