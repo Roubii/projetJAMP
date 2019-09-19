@@ -100,7 +100,7 @@ export default class Filter extends Component {
               (this.state.visible) ?
               <Icons name="ios-arrow-dropright-circle" size={50} color="#083E98" />
               :
-              <Icons name="ios-arrow-dropleft-circle" size={50} color="#083E98s" />
+              <Icons name="ios-arrow-dropleft-circle" size={50} color="#083E98" />
             }
 
           </TouchableOpacity>
