@@ -6,31 +6,32 @@ import BoutonClose from './BoutonClose';
 
 
 
-
 export default class FicheDetail extends Component {
+
   	constructor (props) {
       super(props);
     }
+
 	render() {
+
 		return (
+
 			<View style={styles.container}>
         <BoutonClose close={this.props.close} style={{width:40, height:40}}/>
           <View style={styles.PopupContainer}>
-         
            <DescriptionFicheDetail element={this.props.element}/>
            <View style={styles.divider}></View>
-       
            <FicheDetailAdresse element={this.props.element}/>
-           
-        
           </View>
 			</View>
+
 		);
 	}
 }
 
 const styles = StyleSheet.create({
-	container: {
+
+	container:{
     flex: 1,
     justifyContent:'center',
     alignItems: 'center',
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     minHeight:220,
     paddingBottom:20,
   },
-	PopupContainer: {
+	PopupContainer:{
     flex: 1,
 		width: '100%',
 		height:'100%',
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     flexDirection:'row'	
   },
-  divider :{
+  divider:{
     width:1,
     height: '40%',
     borderRightWidth: 2,

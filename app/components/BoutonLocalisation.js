@@ -4,24 +4,20 @@ import { View, StyleSheet, TouchableOpacity,Text } from 'react-native';
 
 
 export default class BoutonLocalisation extends Component {
-  constructor () {
-    super();
-    this.state ={
+  	
+	render(){
 
-    }
-  }
-	
-	render() {
 		return (
+
      <View >
        <TouchableOpacity onPress={this.props.mapButton} style={styles.touchable}>
         <Text style={styles.text}>Localiser l'ensemble des sociétés</Text>
        </TouchableOpacity>   
      </View>
+
 		)
 	}
 }
-
 
 const styles = StyleSheet.create({
 	

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 
+
 export default class PopupCarte extends Component {
+
   constructor(){
     super();
     this.state = {
@@ -10,9 +12,13 @@ export default class PopupCarte extends Component {
     }
   }
 
+
   render () {
+
     let item = this.props.donnees;
+
     return(
+
       <View style={styles.container}>
         <Text style={styles.societe}>{item.societe}</Text>
         <Text style={styles.type}>{item.type}</Text>
@@ -20,12 +26,14 @@ export default class PopupCarte extends Component {
         <Text>{item.codepostal} {item.ville.toUpperCase()}</Text>
         <TouchableOpacity onPress={() => this.props.sendAdresse(item)}><Text style={styles.info}>Plus d'infos...</Text></TouchableOpacity>
       </View>
+
     )
   }
 }
 
 const styles = StyleSheet.create({
-	container: {
+
+	container:{
     flex: 1,
     backgroundColor:'#fff',
     padding:8,
@@ -33,15 +41,15 @@ const styles = StyleSheet.create({
     width:250,
     height:120
 	},
-  societe: {
+  societe:{
     fontSize:15,
     textDecorationLine:'underline',
-    fontWeight:'bold',
+    fontWeight:'bold'
   },
-  type: {
+  type:{
     marginBottom:2,
   },
-  info : {
+  info:{
     color:'blue',
     textAlign:'right'
   }

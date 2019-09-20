@@ -1,39 +1,30 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import Filiales from './Filiales';
+import { View, StyleSheet } from 'react-native';
 import DescriptionFicheDetail from './DescriptionFicheDetail';
 import FicheDetailAdresse from './FicheDetailAdresse';
 
 
 
-
 export default class DetailRecherche extends Component {
-  constructor () {
-    super();
-    this.state ={
 
-    }
-  }
-	
 	render() {
 		return (
+
 			<View style={styles.container}>
-        
           <View style={styles.PopupContainer}>
-         
            <DescriptionFicheDetail style={{marginTop:100}} element={this.props.element} retour={this.props.close}/>
            <View style={styles.divider}></View>
-       
            <FicheDetailAdresse element={this.props.element}/>
-        
           </View>
 			</View>
+
 		);
 	}
 }
 
 const styles = StyleSheet.create({
-	container: {
+
+	container:{
     flex: 1,
     justifyContent:'center',
     alignItems: 'center',
@@ -41,7 +32,7 @@ const styles = StyleSheet.create({
     width:'100%',
     height:'100%'
   },
-	PopupContainer: {
+	PopupContainer:{
     flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',

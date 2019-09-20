@@ -4,26 +4,23 @@ import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 
 
 
-
 export default class DescriptionFicheDetail extends Component {
-  constructor () {
-    super();
-    this.state ={
-
-    }
-  }
-	
+  
 	render() {
+
     let item = this.props.element;
+
 		return (
+
       <View style={styles.descriptifContainer}>
             <Image style={styles.image} source={item.logo} />
             <Text h1 style={styles.titre}>{item.societe}</Text>
             <Text style={{marginBottom:5}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
-              <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
               <Text style={styles.paragraphe}>{item.description}</Text>
-              </ScrollView>
+            </ScrollView>
         </View>
+        
 		);
 	}
 }
@@ -43,13 +40,11 @@ const styles = StyleSheet.create({
   paragraphe:{
     textAlign :'justify',
     marginBottom :5,
- 
   },
   image:{
     width:200,
     height:80,
     resizeMode:'cover',
     marginTop:-50
-
   }
 });

@@ -3,7 +3,9 @@ import { StyleSheet, View, Image,ImageBackground, Text, TouchableOpacity, Scroll
 
 
 export default class Home extends Component {
+
   render () {
+
     return(
      
       <View style={styles.main}>
@@ -23,7 +25,8 @@ export default class Home extends Component {
 
 
 const styles = StyleSheet.create({
-  main: {
+
+  main:{
     flex:1,
     backgroundColor:'white',
     width:'100%'

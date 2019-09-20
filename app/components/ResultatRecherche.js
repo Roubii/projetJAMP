@@ -6,39 +6,38 @@ import BoutonClose from './BoutonClose';
 
 
 export default class ResultatRecherche extends Component {
+
   	constructor (props) {
       super(props);
     }
+
+
 	render() {
+
     let item = this.props.element;
+
 		return (
+
 			<View style={styles.container}>
-        <BoutonClose close={this.props.close} style={{width:40, height:40}}/>
+          <BoutonClose close={this.props.close} style={{width:40, height:40}}/>
           <View style={styles.PopupContainer}>
-         
-          <View style={styles.descriptifContainer}>
-
-            <View style={styles.vieww}>
-            <Image style={styles.image} source={item.logo} />
-            <Text h1 style={styles.titre}>{item.societe}</Text>
-            <Text style={{marginBottom:5, fontSize:25, marginRight:'10%'}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
-              <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
-              <Text style={styles.paragraphe}>{item.description}</Text>
-              </ScrollView>
+            <View style={styles.descriptifContainer}>
+              <View style={styles.vieww}>
+                <Image style={styles.image} source={item.logo} />
+                <Text h1 style={styles.titre}>{item.societe}</Text>
+                <Text style={{marginBottom:5, fontSize:25, marginRight:'10%'}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
+                  <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
+                  <Text style={styles.paragraphe}>{item.description}</Text>
+                  </ScrollView>
               </View>
-
-          </View>
-          
-           <View style={styles.divider}></View>
-       
-            <View style={styles.contentContainer}>
-              <Text h2 style={styles.titreAdresse}>{item.type}</Text>
-              <Text style={styles.adresse}>{item.adresse}{"\n"}{item.codepostal} {item.ville}</Text>
             </View>
-           
-        
+            
+            <View style={styles.divider}></View>
+              <View style={styles.contentContainer}>
+                <Text h2 style={styles.titreAdresse}>{item.type}</Text>
+                <Text style={styles.adresse}>{item.adresse}{"\n"}{item.codepostal} {item.ville}</Text>
+              </View>
           </View>
-          
 			</View>
 		);
 	}

@@ -7,16 +7,20 @@ import { Text, StyleSheet, View } from 'react-native';
 export default class Recherche extends React.Component {
 
   render() {
+
     return (
+
       <View style={styles.bouton}>
         <Text style={styles.texteBouton}>Rechercher</Text>
       </View>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
-  bouton: {
+
+  bouton:{
     width:200,
     height:50,
     backgroundColor:'#083E98',
@@ -28,6 +32,6 @@ const styles = StyleSheet.create({
     color:'white',
     fontSize:20,
     fontWeight:'bold',
-    textAlign:'center',
+    textAlign:'center'
   }
 })

@@ -2,9 +2,12 @@ import React, { Component, Fragment } from 'react';
 import { View, StyleSheet, Text, Animated, TouchableOpacity, Dimensions, Button } from 'react-native';
 import Icons from 'react-native-vector-icons/Ionicons'
 
+
+
 let {width} = Dimensions.get('screen');
 
 export default class Filter extends Component {
+
   constructor (props) {
     super(props);
     this.state  = {
@@ -12,9 +15,11 @@ export default class Filter extends Component {
       btnright: new Animated.Value(0),
       visible: false
     }
+
   }
-  ButtonClicked ()
-  {
+
+  ButtonClicked (){
+
     let {visible} = this.state;
     if (!visible) {
       this.setState({
@@ -63,7 +68,9 @@ export default class Filter extends Component {
   }
 
   render() {
+
     return (
+
       <Fragment>
         <Animated.View style={[styles.container, {right: this.state.left}]}>
 
@@ -91,7 +98,7 @@ export default class Filter extends Component {
 
           </View>
 
-          <Button style={{fontWeight:700}}onPress={() => this.props.filtre()} title="Réinitialiser" color="#E2001A"/>
+          <Button style={{fontWeight:700}} onPress={() => this.props.filtre()} title="Réinitialiser" color="#E2001A"/>
 
         </Animated.View>
         <Animated.View style={[styles.myButton, {right: this.state.btnright}]}>
@@ -106,6 +113,7 @@ export default class Filter extends Component {
           </TouchableOpacity>
         </Animated.View>
       </Fragment>
+
     );
   }
 }
@@ -115,6 +123,7 @@ export default class Filter extends Component {
 
 
 const styles = StyleSheet.create({
+
 myButton:{
   paddingHorizontal:20,
   paddingVertical:15,
@@ -123,7 +132,7 @@ myButton:{
   top: '50%',
   right: 0
 },
-container: {
+container:{
   flex: 1,
   width: '30%',
   height: '100%',
@@ -132,13 +141,12 @@ container: {
   position:"absolute",
   top:0,
   borderLeftWidth: 2,
-  borderLeftColor: '#b6bab6',
+  borderLeftColor: '#b6bab6'
 },
 containerFilter : {
- justifyContent:'center',
-  
+ justifyContent:'center'
 },
-groupFilter : {
+groupFilter:{
   fontSize:18,
   fontWeight:'700',
   backgroundColor:'#083E98',
@@ -151,7 +159,7 @@ groupFilter : {
 textFilter:{
   fontSize:18,
   fontWeight:'700',
-  padding:15,
+  padding:15
 },
 filtre:{
   fontSize:30,

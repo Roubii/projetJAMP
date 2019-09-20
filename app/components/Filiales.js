@@ -4,8 +4,11 @@ import { View, StyleSheet, Image, ScrollView, Text } from 'react-native';
 
 
 const Filiales = (props) => {
+
     if (props.group === 'additi'){
+
 		return (
+
       <View style={styles.contentContainer}>
         <Text style={styles.textFiliale}>Filiales</Text>
         <ScrollView>
@@ -21,9 +24,12 @@ const Filiales = (props) => {
         </ScrollView>
       </View>
 
-		);
+    );
+    
 	} else if(props.group === 'ouestfrance') {
+
     return (
+
       <View style={styles.contentContainer}>
       <Text style={styles.textFiliale}>Filiales</Text>
         <ScrollView>
@@ -36,6 +42,7 @@ const Filiales = (props) => {
           <Image style={styles.image}source={require('../img/logo-500x172_editions-ouest-france.jpg')} />
         </ScrollView>
       </View>
+
       );
   }
 }
@@ -43,12 +50,13 @@ const Filiales = (props) => {
 export default Filiales;
 
 const styles = StyleSheet.create({
+
 	contentContainer:{
-  height:'80%',
-  width:'100%',
-  alignItems:'center',
-  justifyContent:'center',
-  padding:40
+    height:'80%',
+    width:'100%',
+    alignItems:'center',
+    justifyContent:'center',
+    padding:40
   },
   image:{
     width:250,

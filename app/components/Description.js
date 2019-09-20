@@ -4,10 +4,11 @@ import BoutonLocalisation from './BoutonLocalisation';
 
 
 
-
 const Description = (props) => {
   if (props.group === 'additi'){
+
 		return (
+
       <View style={styles.descriptifContainer}>
             <Image style={styles.image}source={require('../img/Additi-logo.gif')} />
             <Text h1 style={styles.titre}>Additi</Text>
@@ -17,10 +18,14 @@ const Description = (props) => {
               </Text>
               </ScrollView>
               <BoutonLocalisation mapButton={props.mapButton}/>
-        </View>
+      </View>
+
     );
+
   } else if(props.group === 'ouestfrance') {
+
     return (
+
       <View style={styles.descriptifContainer}>
             <Image style={styles.image}source={require('../img/logo-500x172_OF_Rouge.jpg')} />
             <Text h1 style={styles.titre}>Ouest-France</Text>
@@ -30,7 +35,8 @@ const Description = (props) => {
               </Text>
               </ScrollView>
               <BoutonLocalisation mapButton={props.mapButton}/>
-        </View>
+      </View>
+
     );
   }
 }
@@ -39,13 +45,13 @@ export default Description;
 
 const styles = StyleSheet.create({
 	
-  descriptifContainer: {
+  descriptifContainer:{
     flex:7,
     width: 400,
     marginLeft:100,
     marginTop:50
   },
-  titre: {
+  titre:{
     fontSize: 20,
     marginBottom:20,
     marginTop:20

@@ -6,20 +6,23 @@ import Filter from './Filters';
 import FicheDetail from './FicheDetail';
 import PLACES from '../consts/Places';
 
+
+
 Mapbox.setAccessToken(
 	'pk.eyJ1IjoicGFjdGVzcyIsImEiOiJjazBjNmsydmMweXJlM21wZTh6NGl4cml3In0.QtCHsu5sWL6tKXP6so4bbA'
 );
 
 export default class Map extends Component {
+
 	constructor (props) {
 		super(props);
 		this.state = {
 			detailAdress: false,
-
       data: PLACES,
 		}
 		this.arrayholder = PLACES;
 	}
+
 
 	getAdresse (adresse) {
 		this.setState({
@@ -28,7 +31,6 @@ export default class Map extends Component {
 	}
 
   searchFilterFunction = (text, context) => {
-
     const newData = this.arrayholder.filter(item => {
 			let hasFilter = false;
 			if (item[context] === text || item[context].match(text) != null) {
@@ -36,16 +38,17 @@ export default class Map extends Component {
 			}
 			return hasFilter;
 		});
-		
     this.setState({
       data: newData,
 		});
   };
 
+
 	render() {
+
 		return (
+
 			<View style={styles.container}>
-			
 				<Mapbox.MapView
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}
@@ -53,31 +56,34 @@ export default class Map extends Component {
               <Mapbox.Camera
                 zoomLevel={6.5}
 								centerCoordinate={[-1, 48.08]}
-              />
-							
+              />		
 					<Annotations data={this.state.data} sendAdresse={this.getAdresse.bind(this)}/>
 				</Mapbox.MapView>	
+
 				{
 					(this.state.detailAdress) &&
 					<View style={styles.info}>
 						<FicheDetail close={() => {this.setState({detailAdress : false})}} element={this.state.detailAdress}/>
 					</View>
 				}
+
 					<Filter filtre={this.searchFilterFunction.bind(this)}/>
 			</View> 
+
 		);
 	}
 }
 
 const styles = StyleSheet.create({
-	container: {
+
+	container:{
 		flex: 1
 	},
-	map: {
+	map:{
 		height: 400,
 		marginTop: 80
 	},
-	annotationContainer: {
+	annotationContainer:{
 		width: 30,
 		height: 30,
 		alignItems: 'center',
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		borderRadius: 15
 	},
-	annotationFill: {
+	annotationFill:{
 		width: 30,
 		height: 30,
 		borderRadius: 15,
@@ -99,6 +105,6 @@ const styles = StyleSheet.create({
 		width:'45%',
 		flex:1,
 		justifyContent:'center',
-		alignItems:'center',
+		alignItems:'center'
 	}
 });

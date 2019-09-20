@@ -8,15 +8,11 @@ import BoutonClose from './BoutonClose';
 
 
 export default class Popup extends Component {
-  constructor () {
-    super();
-    this.state ={
-
-    }
-  }
-	
+ 	
 	render() {
+
 		return (
+
 			<View style={styles.container}>
         <View style={styles.PopupContainer}>
         <BoutonClose close={this.props.close}/>
@@ -29,18 +25,20 @@ export default class Popup extends Component {
           </View>
         </View>
 			</View>
+
 		);
 	}
 }
 
 const styles = StyleSheet.create({
-	container: {
+
+	container:{
     flex: 1,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: 'grey',
+    backgroundColor: 'grey'
   },
-	PopupContainer: {
+	PopupContainer:{
     flex: 1,
 		width: '90%',
 		height:'80%',
@@ -49,24 +47,23 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderColor: 'grey',
     borderRadius: 20,
-    flexDirection:'column',
- 
+    flexDirection:'column'
   },
-  PopupSousContainer: {
+  PopupSousContainer:{
     flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
     flexDirection:'row',
     marginLeft: 40
   },
-  divider :{
+  divider:{
     width:1,
     height: '50%',
     borderRightWidth: 2,
     borderRightColor: 'rgb(224, 224, 224)',
-    padding:20,
+    padding:20
   },
-  blocGauche: {
+  blocGauche:{
     flexDirection:'column',
     justifyContent:'flex-end'
   },
