@@ -16,7 +16,7 @@ const Description = (props) => {
                 Au plus près de leur marché, leurs équipes accompagnent le développement des acteurs locaux grâce à des solutions publicitaires et marketing efficaces pour répondre à la diversité des enjeux : trafic, référencement, visibilité, image de marque...
               </Text>
               </ScrollView>
-              <BoutonLocalisation/>
+              <BoutonLocalisation mapButton={props.mapButton}/>
         </View>
     );
   } else if(props.group === 'ouestfrance') {
@@ -29,7 +29,7 @@ const Description = (props) => {
                propriété de l'Association pour le soutien des principes de la démocratie humaniste (ASPDH), contrôlée par la famille Hutin. 
               </Text>
               </ScrollView>
-              <BoutonLocalisation/>
+              <BoutonLocalisation mapButton={props.mapButton}/>
         </View>
     );
   }

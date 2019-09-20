@@ -57,7 +57,7 @@ export default class Router extends Component {
     } else if (this.state.page === 'ouestfrance' || this.state.page === 'additi') {
       return <View style={{flex:1}}>
         {this.renderEntete()}
-      <Popup group={this.state.page} close={() => {this.setState({page: this.state.previous})}}/>
+      <Popup mapButton={() => {this.setState({page:'map', previous: page})}} group={this.state.page} close={() => {this.setState({page: false})}}/>
       </View>
 
     } else if (this.state.page === 'search') {

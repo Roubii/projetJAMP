@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import Mapbox from '@react-native-mapbox-gl/maps';
 import PLACES from '../consts/Places';
 import PopupCarte from './PopupCarte';

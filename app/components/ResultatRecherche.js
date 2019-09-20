@@ -17,12 +17,16 @@ export default class ResultatRecherche extends Component {
           <View style={styles.PopupContainer}>
          
           <View style={styles.descriptifContainer}>
+
+            <View style={styles.vieww}>
             <Image style={styles.image} source={item.logo} />
             <Text h1 style={styles.titre}>{item.societe}</Text>
             <Text style={{marginBottom:5, fontSize:25, marginRight:'10%'}}>Dirigeant : {item.dirigeantPrenom} {item.dirigeant}</Text>
               <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.containerText}>
               <Text style={styles.paragraphe}>{item.description}</Text>
               </ScrollView>
+              </View>
+
           </View>
           
            <View style={styles.divider}></View>
@@ -111,6 +115,10 @@ const styles = StyleSheet.create({
       marginRight:'35%',
       fontSize:20,
     },
+    vieww:{
+      marginLeft:100,
+      marginTop:-200,
+    }
 
    
 

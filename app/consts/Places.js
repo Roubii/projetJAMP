@@ -413,7 +413,7 @@ const PLACES = [
     dirigeant: "MARTINAT",
     dirigeantPrenom: "Renaud",    
     description: "",
-    logo:''
+    logo:require('../img/logo-500x172_OF_Rouge.jpg')
   },
   {
     societe: "Ouest-France",
@@ -787,8 +787,8 @@ const PLACES = [
     coordonnees: [-1.6293, 48.0951],
     type: "Siège",    
     groupe: "Additi",
-    dirigeant: "Lelièvre/Phillibert",
-    dirigeantPrenom: "Patrick/Christian",    
+    dirigeant: "Patrick Lelièvre",
+    dirigeantPrenom: "Christian Phillibert et",    
     description: "",
     logo:require('../img/PRECOM/logo-500x172_precom.jpg')
   },

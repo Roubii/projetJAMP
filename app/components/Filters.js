@@ -85,7 +85,7 @@ export default class Filter extends Component {
             <View style={{justifyContent:'center',alignItems:'center'}}>
             <TouchableOpacity onPress={() => this.props.filtre('Rédaction', 'type')}><Text style={styles.textFilter}>Rédaction</Text></TouchableOpacity>
               <TouchableOpacity onPress={() => this.props.filtre("Imprimerie", 'type')}><Text style={styles.textFilter}>Imprimerie</Text></TouchableOpacity>
-              <TouchableOpacity onPress={() => this.props.filtre('édition', 'type')}><Text style={styles.textFilter}>Edition</Text></TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.filtre('Edition', 'type')}><Text style={styles.textFilter}>Edition</Text></TouchableOpacity>
               <TouchableOpacity onPress={() => this.props.filtre('Siège', 'type')}><Text style={styles.textFilter}>Siège</Text></TouchableOpacity>
             </View>
 
@@ -98,9 +98,9 @@ export default class Filter extends Component {
           <TouchableOpacity onPress={()=>this.ButtonClicked()} >
             {
               (this.state.visible) ?
-              <Icons name="ios-arrow-dropright-circle" size={50} color="#000" />
+              <Icons name="ios-arrow-dropright-circle" size={50} color="#083E98" />
               :
-              <Icons name="ios-arrow-dropleft-circle" size={50} color="#000" />
+              <Icons name="ios-arrow-dropleft-circle" size={50} color="#083E98" />
             }
 
           </TouchableOpacity>
