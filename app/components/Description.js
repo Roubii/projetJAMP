@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import BoutonLocalisation from './BoutonLocalisation';
 
 
+// Description des groupes de SIPA en fonction de la propriété transmise du Router à Home puis Popup
 
 const Description = (props) => {
   if (props.group === 'additi'){

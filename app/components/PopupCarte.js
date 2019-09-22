@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 
-
+// Popup s'affichant lors d'un clic sur un point de la carte. Contenu dans le Callout d'Annotations
 export default class PopupCarte extends Component {
 
   constructor(){

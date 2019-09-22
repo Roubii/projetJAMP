@@ -35,7 +35,7 @@ renderSeparator = () => {
   );
 };
 
-
+// Fonction de suppression des caractères spéciaux
 neutralText (txt) {
   txt = txt.toLowerCase();
   txt = txt.replace(/(é|è|e|ë|ê)/g,"e");
@@ -48,7 +48,7 @@ neutralText (txt) {
     return txt;
 }
 
-
+// Fonction de recherche dans PLACES à partir du texte rentré dans la barre de recherche
 searchFilterFunction = text => {
   this.setState({
     value: text

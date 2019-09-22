@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 
 
-
+// Affichage des détails d'une entreprise à partir de la carte
+// Cible l'élément sélectionné à partir du Callout d'Annotations
 
 export default class DescriptionFicheDetail extends Component {
   

@@ -23,13 +23,14 @@ export default class Map extends Component {
 		this.arrayholder = PLACES;
 	}
 
-
+	// Sélectionne l'élément ciblé dans les composants enfants et récupère les données
 	getAdresse (adresse) {
 		this.setState({
 			detailAdress: adresse
 		})
 	}
 
+	// Place les éléments correspondants au filtre appliqué dans un tableau retourné dans Annotations
   searchFilterFunction = (text, context) => {
     const newData = this.arrayholder.filter(item => {
 			let hasFilter = false;

@@ -24,6 +24,8 @@ export default class Filter extends Component {
 
   }
 
+  // Animations de la barre de filtre
+  // Clic du bouton actionne l'agrandissement de la view
   ButtonClicked (){
 
     let {visible} = this.state;
@@ -72,6 +74,8 @@ export default class Filter extends Component {
     ).start()    
   }
 
+  // Remise à zéro des filtres, tous les filtres sont désélectionnés
+
   resetFilters () {
     this.setState({
       ouestfrance : false,
@@ -83,6 +87,7 @@ export default class Filter extends Component {
     })
   }
 
+  // Changement du style des filtres, l'actionnement d'un filtre supprime celui du précédent
   ouestfrancefilter () {
     this.setState({
       ouestfrance:true,

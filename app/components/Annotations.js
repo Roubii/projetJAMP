@@ -13,6 +13,8 @@ export default class Annotations extends Component {
 
      return (
 
+      // Génération des points sur la carte en fonction du tableau de données
+      
       <View style={styles.container}>
           {items.map((item,k) => 
         <Mapbox.PointAnnotation
