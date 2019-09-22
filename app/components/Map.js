@@ -53,10 +53,10 @@ export default class Map extends Component {
 					styleURL={Mapbox.StyleURL.Street}
 					style={styles.container}
 					rotateEnabled={false}>
-              <Mapbox.Camera
-                zoomLevel={6.5}
-								centerCoordinate={[-1, 48.08]}
-              />		
+					<Mapbox.Camera
+						zoomLevel={6.5}
+						centerCoordinate={[-1, 48.08]}
+					/>		
 					<Annotations data={this.state.data} sendAdresse={this.getAdresse.bind(this)}/>
 				</Mapbox.MapView>	
 

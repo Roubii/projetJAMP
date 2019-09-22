@@ -13,7 +13,13 @@ export default class Filter extends Component {
     this.state  = {
       left: new Animated.Value(-(width*.3)),
       btnright: new Animated.Value(0),
-      visible: false
+      visible: false,
+      ouestfrance : false,
+      additi : false,
+      redaction: false,
+      imprimerie: false,
+      siege: false,
+      edition: false,
     }
 
   }
@@ -63,8 +69,79 @@ export default class Filter extends Component {
         toValue: 0,
         duration: 800,
       }
-    ).start()
-    
+    ).start()    
+  }
+
+  resetFilters () {
+    this.setState({
+      ouestfrance : false,
+      additi : false,
+      redaction: false,
+      imprimerie: false,
+      siege: false,
+      edition: false,
+    })
+  }
+
+  ouestfrancefilter () {
+    this.setState({
+      ouestfrance:true,
+      additi : false,
+      redaction: false,
+      imprimerie: false,
+      siege: false,
+      edition: false,
+    })
+  }
+  additifilter () {
+    this.setState({
+      ouestfrance:false,
+      additi : true,
+      redaction: false,
+      imprimerie: false,
+      siege: false,
+      edition: false,
+    })
+  }
+  redactionfilter () {
+    this.setState({
+      ouestfrance:false,
+      additi : false,
+      redaction: true,
+      imprimerie: false,
+      siege: false,
+      edition: false,
+    })
+  }
+  imprimeriefilter () {
+    this.setState({
+      ouestfrance:false,
+      additi : false,
+      redaction: false,
+      imprimerie: true,
+      siege: false,
+      edition: false,
+    })
+  }
+  siegefilter () {
+    this.setState({
+      ouestfrance:false,
+      additi : false,
+      redaction: false,
+      imprimerie: false,
+      siege: true,
+      edition: false,
+    })
+  }
+  editionfilter () {
+    this.setState({
+      ouestfrance: false,
+      additi : false,
+      redaction: false,
+      imprimerie: false,
+      siege: false,
+      edition: true,
+    })
   }
 
   render() {
@@ -75,12 +152,23 @@ export default class Filter extends Component {
         <Animated.View style={[styles.container, {right: this.state.left}]}>
 
           <View style={styles.containerFilter}>
-          <Text style={styles.filtre}>Filtres</Text>
+            <Text style={styles.filtre}>Filtres</Text>
             <Text style={styles.groupFilter}>Groupe</Text>
 
             <View style={{justifyContent:'center',alignItems:'center'}}>
-            <TouchableOpacity onPress={() => this.props.filtre('Ouest-France', 'groupe')}><Text style={styles.textFilter}>Ouest-France</Text></TouchableOpacity>
-            <TouchableOpacity onPress={() => this.props.filtre('Additi', 'groupe')}><Text style={styles.textFilter}>Additi</Text></TouchableOpacity>
+              
+              {
+                (this.state.ouestfrance === false) ?
+                  <TouchableOpacity onPress={() => {this.props.filtre('Ouest-France', 'groupe'); this.ouestfrancefilter()}}><Text style={styles.textFilter}>Ouest-France</Text></TouchableOpacity>
+                :
+                  <Text style={styles.textFilterOn}>Ouest-France</Text>
+              }
+              {
+                (this.state.additi === false) ?
+                  <TouchableOpacity onPress={() => {this.props.filtre('Additi', 'groupe'); this.additifilter()}}><Text style={styles.textFilter}>Additi</Text></TouchableOpacity>
+                :
+                  <Text style={styles.textFilterOn}>Additi</Text>
+              }
             </View>
 
           </View>
@@ -89,16 +177,36 @@ export default class Filter extends Component {
 
             <Text style={styles.groupFilter}>Type</Text>
 
-            <View style={{justifyContent:'center',alignItems:'center'}}>
-            <TouchableOpacity onPress={() => this.props.filtre('Rédaction', 'type')}><Text style={styles.textFilter}>Rédaction</Text></TouchableOpacity>
-              <TouchableOpacity onPress={() => this.props.filtre("Imprimerie", 'type')}><Text style={styles.textFilter}>Imprimerie</Text></TouchableOpacity>
-              <TouchableOpacity onPress={() => this.props.filtre('Edition', 'type')}><Text style={styles.textFilter}>Edition</Text></TouchableOpacity>
-              <TouchableOpacity onPress={() => this.props.filtre('Siège', 'type')}><Text style={styles.textFilter}>Siège</Text></TouchableOpacity>
+            <View style={{justifyContent:'center',alignItems:'center'}}>              
+              {
+                (this.state.redaction === false) ?
+                  <TouchableOpacity onPress={() => {this.props.filtre('Rédaction', 'type'); this.redactionfilter()}}><Text style={styles.textFilter}>Rédaction</Text></TouchableOpacity>
+                :
+                  <Text style={styles.textFilterOn}>Rédaction</Text>
+              }
+              {
+                (this.state.imprimerie === false) ?
+                  <TouchableOpacity onPress={() => {this.props.filtre("Imprimerie", 'type'); this.imprimeriefilter()}}><Text style={styles.textFilter}>Imprimerie</Text></TouchableOpacity>
+                :
+                  <Text style={styles.textFilterOn}>Imprimerie</Text>
+              }
+              {
+                (this.state.edition === false) ?
+                  <TouchableOpacity onPress={() => {this.props.filtre('Edition', 'type'); this.editionfilter()}}><Text style={styles.textFilter}>Edition</Text></TouchableOpacity>
+                :
+                  <Text style={styles.textFilterOn}>Edition</Text>
+              }
+              {
+                (this.state.siege === false) ?
+                  <TouchableOpacity onPress={() => {this.props.filtre('Siège', 'type'); this.siegefilter()}}><Text style={styles.textFilter}>Siège</Text></TouchableOpacity>
+                :
+                  <Text style={styles.textFilterOn}>Siège</Text>
+              }
             </View>
 
           </View>
 
-          <Button style={{fontWeight:700}} onPress={() => this.props.filtre()} title="Réinitialiser" color="#E2001A"/>
+          <Button style={{fontWeight:700}} onPress={() => {this.props.filtre(); this.resetFilters()}} title="Réinitialiser" color="#E2001A"/>
 
         </Animated.View>
         <Animated.View style={[styles.myButton, {right: this.state.btnright}]}>
@@ -160,6 +268,15 @@ textFilter:{
   fontSize:18,
   fontWeight:'700',
   padding:15
+},
+textFilterOn:{
+  fontSize:18,
+  fontWeight:'700',
+  padding:8,
+  margin: 7,
+  backgroundColor: '#E2001A',
+  color:'#fff',
+  borderRadius:30,
 },
 filtre:{
   fontSize:30,
